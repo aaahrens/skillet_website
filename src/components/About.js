@@ -27,6 +27,7 @@ const About = (props) => {
 
 export default connect(
     (state) => ({
+        getAbout : state.data.aboutBody
     }),
     (dispatch) => ({
 
