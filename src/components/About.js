@@ -5,16 +5,19 @@ import React from 'react'
 import {connect} from 'react-redux'
 import {push} from 'react-router-redux'
 import Footer from "./Footer";
+
 import Card from "./reusable/card.component"
-import SectionCard from "./reusable/section-card.component"
+import Section from "./reusable/section.component"
+
+import image from "../about-image.png"
 
 const About = (props) => {
-
     return (
         <div id="body">
             <div id="content">
-                <Card id="team-image" value="image" />
-                <SectionCard id="about-section" value="What we're all about" cardValue={props.getAbout} />
+                <Card id="team-image" valueImage={image}/>
+                <Section value="What we're all about" />
+                <Card id="about-section" value={props.getAbout} />
             </div>
             <Footer/>
         </div>

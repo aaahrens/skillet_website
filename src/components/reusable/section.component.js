@@ -5,10 +5,7 @@ import Card from './card.component'
 
 const SectionCard = (props) => {
 	return (
-		<div className="section-card">
-			<h2 className="section">{props.value}</h2>
-			<Card value={props.cardValue} />
-		</div>
+		<div className="section">{props.value}</div>
 	)
 }
 
