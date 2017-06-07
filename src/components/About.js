@@ -6,8 +6,8 @@ import {connect} from 'react-redux'
 import {push} from 'react-router-redux'
 import Footer from "./Footer";
 
-import Card from "./reusable/card.component"
-import Section from "./reusable/section.component"
+import Card from "./Card"
+import Section from "./Section"
 
 import image from "../about-image.png"
 
@@ -27,7 +27,6 @@ const About = (props) => {
 
 export default connect(
     (state) => ({
-        getAbout : state.data.aboutBody
     }),
     (dispatch) => ({
 
