@@ -6,14 +6,16 @@ import {connect} from 'react-redux'
 import {push} from 'react-router-redux'
 import Footer from './Footer'
 
+import Section from './Section'
+
+import image from '../location.png'
+
 const Location = (props) => {
 
     return (
         <div id="body">
             <div id="content">
-                <text>
-                    I am a location content
-                </text>
+                <Section valueImage={image} />
             </div>
             <Footer/>
         </div>
