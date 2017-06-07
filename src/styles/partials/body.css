@@ -1,0 +1,18 @@
+#body {
+  flex: 1;
+  display: inline-flex;
+  flex-direction: column; }
+  #body #content {
+    flex: 1; }
+  #body #footer {
+    display: inline-flex;
+    align-self: flex-end;
+    justify-self: flex-end;
+    align-content: center;
+    justify-content: center;
+    background: #dfbd87;
+    flex-direction: column;
+    width: 100%;
+    height: 75px; }
+    #body #footer #footer-line {
+      text-align: center; }

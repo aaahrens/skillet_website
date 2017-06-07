@@ -1,4 +1,58 @@
+.header {
+  width: 100%;
+  height: 200px;
+  background: #d57b64;
+  display: inline-flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center; }
+  .header .logo {
+    height: 175px;
+    width: 175px; }
+  .header #button-container {
+    background: rosybrown;
+    display: inline-flex;
+    flex-wrap: nowrap;
+    flex-grow: 1;
+    width: 400px; }
+    .header #button-container #menu-button {
+      flex: 1;
+      background: green;
+      text-align: center; }
+      .header #button-container #menu-button:hover {
+        background: dodgerblue; }
+
+#body {
+  flex: 1;
+  display: inline-flex;
+  flex-direction: column; }
+  #body #content {
+    flex: 1; }
+  #body #footer {
+    display: inline-flex;
+    align-self: flex-end;
+    justify-self: flex-end;
+    align-content: center;
+    justify-content: center;
+    background: #dfbd87;
+    flex-direction: column;
+    width: 100%;
+    height: 75px; }
+    #body #footer #footer-line {
+      text-align: center; }
+
 * {
   -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box; }
+  -moz-box-sizing: border-box; }
+
+.screen {
+  width: 100%;
+  min-height: 100vh;
+  max-height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column; }
