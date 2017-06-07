@@ -12,9 +12,15 @@ const Menu = (props) => {
     return (
         <div id="body">
             <div id="content">
-                <text>
-                    I am a menu body
-                </text>
+				{
+					props.menu.map((item, index) => {
+						return (
+							<div key={index}>
+								{JSON.stringify(item)}
+							</div>
+						)
+					})
+				}
             </div>
             <Footer/>
         </div>
@@ -24,7 +30,7 @@ const Menu = (props) => {
 
 export default connect(
     (state) => ({
-
+		menu : state.data.menu
     }),
     (dispatch) => ({
 
