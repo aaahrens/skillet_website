@@ -40,10 +40,7 @@
       padding-top: 7px;
       flex: 1;
       width: 50px;
-      text-align: center;
-      transition-duration: .15s;
-      transition-timing-function: eanmpse-in-out;
-      transition-property: color; }
+      text-align: center; }
       .header #button-container .menu-button:hover {
         color: #57cee1; }
 
@@ -67,12 +64,18 @@
   font-size: 1em; }
 
 #body {
+  position: absolute;
+  left: 0;
+  top: 300px;
   flex: 1;
+  width: 100%;
   display: inline-flex;
   flex-direction: column;
-  background: url("./images/tree.png") repeat; }
+  overflow-y: scroll;
+  background: url("./images/tree.png") repeat;
+  min-height: calc(100% - 300px); }
   #body #content {
-    flex: 1; }
+    min-height: calc(100vh - 375px); }
   #body #footer {
     align-self: flex-end;
     justify-self: flex-end;
@@ -130,4 +133,5 @@
   left: 0;
   margin: 0 auto;
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  flex-basis: 0; }

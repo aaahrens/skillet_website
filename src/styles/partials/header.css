@@ -40,10 +40,7 @@
       padding-top: 7px;
       flex: 1;
       width: 50px;
-      text-align: center;
-      transition-duration: .15s;
-      transition-timing-function: eanmpse-in-out;
-      transition-property: color; }
+      text-align: center; }
       .header #button-container .menu-button:hover {
         color: #57cee1; }
 

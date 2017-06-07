@@ -11,9 +11,8 @@ const Location = (props) => {
     return (
         <div id="body">
             <div id="content">
-                <text>
-                    I am a location content
-                </text>
+
+
             </div>
             <Footer/>
         </div>

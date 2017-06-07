@@ -1,12 +1,19 @@
 @import './variables/colors.sass'
 @import './mixins.sass'
 #body
+  position: absolute
+  left: 0
+  top: 300px
   flex: 1
+  width: 100%
   display: inline-flex
   flex-direction: column
+  overflow-y: scroll
   background: url('./images/tree.png') repeat
+  min-height: calc(100% - 300px)
   #content
-    flex: 1
+    //100 height - size of header -  size of footer feel free to make variable although probs gonna be this only time
+    min-height: calc(100vh - 375px)
   #footer
     align-self: flex-end
     justify-self: flex-end
