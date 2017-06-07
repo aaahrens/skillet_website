@@ -1,3 +1,18 @@
+.font-header-1 {
+  font-size: 3em;
+  font-weight: bolder; }
+
+.font-header-2, .section {
+  font-size: 2em;
+  font-weight: bolder; }
+
+.font-header-3 {
+  font-size: 1em;
+  font-weight: bold; }
+
+.font-body-copy, .card {
+  font-size: 1em; }
+
 .section {
   text-align: center;
   background-color: cadetblue;

@@ -1,0 +1,15 @@
+@import './variables/colors.sass'
+@import "./variables/font-sheet.sass"
+=shadow()
+  box-shadow: 0 8px 15px rgba(#000, .25)
+
+=shadow_small()
+  box-shadow: 0 4px 12px rgba(#000, .25)
+
+=transition($beige-main)
+  transition-duration: .15s
+  transition-timing-function: eanmpse-in-out
+  transition-property: unquote($beige-main)
+
+=glow($a)
+  box-shadow: 0 1px 12px rgba($beige-main, .35)

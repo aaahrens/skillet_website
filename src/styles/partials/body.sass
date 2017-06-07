@@ -1,4 +1,5 @@
 @import './variables/colors.sass'
+@import './mixins.sass'
 #body
   flex: 1
   display: inline-flex
@@ -15,5 +16,6 @@
     flex-direction: column
     width: 100%
     height: 75px
-  #footer-line
-    text-align: center
+      +shadow()
+    #footer-line
+      text-align: center
