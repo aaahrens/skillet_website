@@ -13,19 +13,26 @@ const Header = (props) => {
 
     return (
         <div className="header">
-            <a onClick={() => props.goHome()} className="logo">
-                <img src={image} className="logo"/>
+            <a onClick={() => props.goHome()} id="logo-container">
+				<img src={image} className="logo">
+
+				</img>
             </a>
             <div id="button-container">
-                <a id="menu-button" onClick={() => props.goLocation()}>
+                <a className="menu-button" onClick={() => props.goLocation()}>
                     Location
                 </a>
-                <a id="menu-button" onClick={() => props.goMenu()}>
+                <a className="menu-button" onClick={() => props.goMenu()}>
                     Menu
                 </a>
-                <a id="menu-button" onClick={() => props.goAbout()}>
+				<div className="menu-button">
+				</div>
+                <a className="menu-button" onClick={() => props.goAbout()}>
                     About
                 </a>
+				<a className="menu-button" onClick={() => props.goAbout()}>
+					Gallery
+				</a>
             </div>
         </div>
     )

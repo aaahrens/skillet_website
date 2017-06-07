@@ -1,24 +1,32 @@
 .header {
   width: 100%;
-  height: 200px;
+  height: 300px;
   display: inline-flex;
   flex-direction: column;
   align-content: center;
   justify-content: center;
-  align-items: center;
-  background: #e16a57; }
-  .header .logo {
-    height: 175px;
-    width: 175px; }
-  .header #button-container {
-    background: rosybrown;
+  align-items: center; }
+  .header #logo-container {
+    background: #e16a57;
+    height: 250px;
+    width: 100%;
     display: inline-flex;
-    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center; }
+  .header #button-container {
+    width: 300px;
+    justify-content: center;
+    display: inline-flex;
     flex-grow: 1;
-    width: 400px; }
-    .header #button-container #menu-button {
+    flex-basis: 0; }
+    .header #button-container .menu-button {
+      margin: 10px;
       flex: 1;
-      background: green;
+      width: 50px;
       text-align: center; }
-      .header #button-container #menu-button:hover {
-        background: dodgerblue; }
+      .header #button-container .menu-button:hover {
+        color: #57cee1; }
+
+.logo {
+  width: 300px;
+  height: 300px; }
