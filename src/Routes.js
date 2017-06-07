@@ -14,18 +14,18 @@ import Home from "./components/Home"
 
 const Routes = (props) => {
 
-    return (
-        <div className="screen">
-            <Route path="/" component={Header}/>
-            <Switch>
-                <Route path="/about" component={About}/>
-                <Route path="/location" component={Location}/>
-                <Route path="/menu" component={Menu}/>
-                <Route path="/" component={Home}/>
-            </Switch>
-        </div>
-        )
-    };
+	return (
+		<div className="screen">
+			<Route path="/" component={Header}/>
+			<Switch>
+				<Route path="/about" component={About}/>
+				<Route path="/location" component={Location}/>
+				<Route path="/menu" component={Menu}/>
+				<Route path="/" component={Home}/>
+			</Switch>
+		</div>
+	)
+};
 
 
 export default Routes
