@@ -4,7 +4,7 @@
 @import './mixins.sass'
 .header
   width: 100%
-  height: 300px
+  height: $header-size
   display: inline-flex
   flex-direction: column
   align-content: center
@@ -13,7 +13,7 @@
   background: $background
   +shadow()
   @include breakpoint($tablet)
-    height: 100px
+    height: $header-size-mobile
 
   #logo-container
     background: $salmon-main
@@ -27,21 +27,30 @@
       height: 75px
 
   #button-container
-    width: 300px
+    width: 100%
     justify-content: center
     display: inline-flex
+    align-items: center
     flex-grow: 1
     flex-basis: 0
     .menu-button
-      margin: 10px
-      padding-top: 7px
+      margin: 5px
       flex: 1
       width: 50px
       text-align: center
-      @include breakpoint($tablet)
-        margin: 0
+      display: inline-block
+      &[data="true"]
+        border-bottom: thin solid $salmon-main
       &:hover
-        color: $blue
+        border-bottom: thin solid $salmon-main
+      @include breakpoint($tablet)
+        margin: 5px
+        &:first-child
+          margin-left: 10px
+        &:last-child
+
+        &[placeholder="true"]
+          flex: .25
 
 .logo
   width: 300px

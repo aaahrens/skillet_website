@@ -9,6 +9,7 @@ import Card from "./Card";
 
 const Menu = (props) => {
 
+
 	return (
 		<div id="body">
 			<div id="content">

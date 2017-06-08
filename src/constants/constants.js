@@ -3,6 +3,7 @@
  */
 export const GET_MENU = "GET_MENU";
 export const LOAD_MENU = "LOAD_MENU";
+export const SELECT_TAB = "SELECT_TAB";
 
 
 //other consts not actions goes below here

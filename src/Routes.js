@@ -5,21 +5,27 @@ import React from "react";
 import "./styles/screen.css";
 import {Route, Switch} from "react-router";
 import Header from "./components/Header";
-import Location from "./components/Location";
-import About from "./components/About";
+import Location from "./components/bodies/Location";
+import About from "./components/bodies/About";
 import Menu from "./components/Menu";
-import Home from "./components/Home";
+import Home from "./components/bodies/Home";
+import Gallery from "./components/bodies/Gallery";
 import {connect} from "react-redux";
 import * as data from "./actions/data.actions";
-import { withRouter } from 'react-router-dom'
+import {withRouter} from "react-router-dom";
+import * as state from "./actions/state.actions";
 
 class Routes extends React.Component {
 
-	constructor(props){
+	constructor(props) {
 		super(props);
-		this.props.getMenu()
+		this.props.getMenu();
+		this.props.select(props.location.pathname.replace("/", ''))
 	}
 
+	componentWillReceiveProps(nextProps) {
+		this.props.select(nextProps.location.pathname.replace("/", ''))
+	}
 
 	render() {
 		return (
@@ -29,6 +35,7 @@ class Routes extends React.Component {
 					<Route path="/about" component={About}/>
 					<Route path="/location" component={Location}/>
 					<Route path="/menu" component={Menu}/>
+					<Route path="/gallery" component={Gallery}/>
 					<Route path="/" component={Home}/>
 				</Switch>
 			</div>
@@ -38,10 +45,10 @@ class Routes extends React.Component {
 
 
 export default withRouter(connect(
-	(state) => ({
-
-	}),
+	(state) => ({}),
 	(dispatch) => ({
-		getMenu: () => dispatch(data.getMenu())
+		getMenu: () => dispatch(data.getMenu()),
+		select: (name) => dispatch(state.selectTab(name))
+
 	})
 )(Routes))

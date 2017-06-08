@@ -41,9 +41,9 @@
   min-height: calc(100% - 300px); }
   @media (max-width: 768px) {
     #body {
-      top: 100px; } }
+      top: 120px; } }
   #body #content {
-    min-height: calc(100vh - 400px);
+    min-height: calc(100vh - 300px);
     align-items: center;
     justify-content: center;
     display: inline-flex;
@@ -51,7 +51,7 @@
     flex-grow: 1; }
     @media (max-width: 768px) {
       #body #content {
-        min-height: calc(100vh - 100px); } }
+        min-height: calc(100vh - 120px); } }
     #body #content > .card {
       height: 100%;
       background: whitesmoke;

@@ -15,18 +15,17 @@
   background: url('./images/tree.png') repeat
   min-height: calc(100% - 300px)
   @include breakpoint($tablet)
-    top: 100px
+    top: $header-size-mobile
   #content
     //100 height - size of header -  size of footer feel free to make variable although probs gonna be this only time
-    min-height: calc(100vh - 400px)
+    min-height: calc(100vh - #{$header-size})
     align-items: center
     justify-content: center
     display: inline-flex
     flex-direction: column
     flex-grow: 1
     @include breakpoint($tablet)
-      min-height: calc(100vh - 100px)
-
+      min-height: calc(100vh - #{$header-size-mobile})
     > .card
       height: 100%
       background: whitesmoke
@@ -52,6 +51,6 @@
       text-align: center
       margin: 25px
       &:first-child
-          margin-left: 100px
+        margin-left: 100px
 
 

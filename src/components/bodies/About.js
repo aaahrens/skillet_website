@@ -3,11 +3,12 @@
  */
 import React from "react";
 import {connect} from "react-redux";
-import Footer from "./Footer";
-
-import Card from "./Card";
+import Footer from "../Footer";
+import Card from "../Card";
 
 const About = (props) => {
+
+
 	return (
 		<div id="body">
 			<div id="content">
@@ -23,7 +24,5 @@ export default connect(
 	(state) => ({
 		text: state.data.placeHolder
 	}),
-	(dispatch) => ({
-
-	})
+	(dispatch) => ({})
 )(About)

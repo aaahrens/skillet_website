@@ -17,18 +17,18 @@ const Header = (props) => {
 				</img>
 			</a>
 			<div id="button-container">
-				<a className="menu-button" onClick={() => props.goLocation()}>
+				<a className="menu-button" onClick={() => props.goLocation()} data={"location" === props.currentTab}>
 					Location
 				</a>
-				<a className="menu-button" onClick={() => props.goMenu()}>
+				<a className="menu-button" onClick={() => props.goMenu()} data={"menu" === props.currentTab}>
 					Menu
 				</a>
-				<div className="menu-button">
+				<div className="menu-button" placeholder="true">
 				</div>
-				<a className="menu-button" onClick={() => props.goAbout()}>
+				<a className="menu-button" onClick={() => props.goAbout()} data={"about" === props.currentTab}>
 					About
 				</a>
-				<a className="menu-button" onClick={() => props.goAbout()}>
+				<a className="menu-button" onClick={() => props.goGallery()} data={"gallery" === props.currentTab}>
 					Gallery
 				</a>
 			</div>
@@ -38,12 +38,15 @@ const Header = (props) => {
 
 
 export default connect(
-	(state) => ({}),
+	(state) => ({
+		currentTab: state.state.currentTab
+	}),
 	(dispatch) => ({
 		goAbout: () => dispatch(push("/about")),
 		goMenu: () => dispatch(push("/menu")),
 		goLocation: () => dispatch(push("/location")),
 		goHome: () => dispatch(push("/")),
+		goGallery: () => dispatch(push("/gallery")),
 		getMenu: () => dispatch(data.getMenu())
 	})
 )(Header)

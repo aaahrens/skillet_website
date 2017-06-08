@@ -6,11 +6,11 @@
  */
 import React from "react";
 import {connect} from "react-redux";
-import Footer from "./Footer";
-import Card from "./Card";
-
+import Footer from "../Footer";
+import Card from "../Card";
 
 const Home = (props) => {
+
 
 	return (
 		<div id="body">

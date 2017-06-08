@@ -14,7 +14,7 @@ const Footer = (props) => {
 				Windsor, CA 95492
 			</div>
 			<div id="footer-line">
-				(888)-888-9999  <br/>
+				(888)-888-9999 <br/>
 				dicknuggets@mgee.com
 			</div>
 			<div id="footer-line">
