@@ -1,16 +1,12 @@
 /**
  * Created by drunkengranite on 1/14/2017.
  */
-import {handleActions} from 'redux-actions'
-import Immutable from 'immutable'
+import {handleActions} from "redux-actions";
 
 
-let initialState = {
-};
+let initialState = {};
 
 
-const stateReducers = handleActions({
-
-}, initialState);
+const stateReducers = handleActions({}, initialState);
 
 export default stateReducers;

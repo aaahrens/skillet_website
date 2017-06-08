@@ -14,12 +14,8 @@ const App = (props) => {
 };
 
 export default connect(
-	(state) => ({
-
-	}),
-	(dispatch) => ({
-
-	})
+	(state) => ({}),
+	(dispatch) => ({})
 )(App)
 
 

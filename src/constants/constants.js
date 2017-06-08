@@ -5,10 +5,6 @@ export const GET_MENU = "GET_MENU";
 export const LOAD_MENU = "LOAD_MENU";
 
 
-
-
-
-
 //other consts not actions goes below here
 
 
