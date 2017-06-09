@@ -11,12 +11,9 @@ import Card from "../Card";
 
 const Home = (props) => {
 
-
 	return (
 		<div id="body">
-			<div id="content">
-				<Card text="i am a home body"/>
-			</div>
+			<Card text="i am a home body"/>
 			<Footer />
 		</div>
 	)

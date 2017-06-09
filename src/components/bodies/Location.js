@@ -10,10 +10,6 @@ const Location = (props) => {
 
 	return (
 		<div id="body">
-			<div id="content">
-
-
-			</div>
 			<Footer/>
 		</div>
 	)
