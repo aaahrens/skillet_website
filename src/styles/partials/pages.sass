@@ -1,16 +1,32 @@
+@import './variables/colors.sass'
+@import './variables/sizes.sass'
+
 #location-meta-card
-  float: left
-  position: absolute
+  position: relative
   right: 0
-  .location-meta-card
-    padding: 24px 25% 24px 18px
+  top: 0
+  display: inline-flex
+  background: url("./location.png") no-repeat
+  background-size: cover
+  min-height: calc(100vh - #{$header-size})
+  flex-direction: row
+  flex-wrap: nowrap
+  flex-grow: 1
+  @include breakpoint($tablet)
+    min-height: calc(100vh - #{$header-size-mobile})
+  .location-container
+    flex: 1
+    display: inline-flex
+    flex-direction: column
+  .location-address
     border-radius: 4px 0 0 4px
     background-color: $primary
+    display: inline-flex
+    flex-direction: column
+    height: 20%
   .location-phone-card
     padding: 18px
     float: right
     border-radius: 8px
     margin-right: 25%
     background-color: $primary
-.float-right
-  float: right

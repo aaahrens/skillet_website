@@ -92,24 +92,6 @@
   font-size: 3em;
   font-weight: bolder; }
 
-<<<<<<< HEAD
-.font-header-2, .section, .section-image {
-  font-size: 2em;
-  font-weight: bolder; }
-
-.font-header-3 {
-  font-size: 1em;
-  font-weight: bold; }
-
-.font-body-copy, .card {
-  font-size: 1em; }
-
-.font-header-1 {
-  font-size: 3em;
-  font-weight: bolder; }
-
-=======
->>>>>>> a30db5cd09574c43760d5588ce5aeeb7db5d4a4b
 .font-header-2, .section, .section-image {
   font-size: 2em;
   font-weight: bolder; }
@@ -122,37 +104,35 @@
   font-size: 1em; }
 
 #location-meta-card {
-  float: left;
-  position: absolute;
-  right: 0; }
-  #location-meta-card .location-meta-card {
-    padding: 24px 25% 24px 18px;
+  position: relative;
+  right: 0;
+  top: 0;
+  display: inline-flex;
+  background: url("./location.png") no-repeat;
+  background-size: cover;
+  min-height: calc(100vh - 300px);
+  flex-direction: row;
+  flex-wrap: nowrap;
+  flex-grow: 1; }
+  @media (max-width: 768px) {
+    #location-meta-card {
+      min-height: calc(100vh - 120px); } }
+  #location-meta-card .location-container {
+    flex: 1;
+    display: inline-flex;
+    flex-direction: column; }
+  #location-meta-card .location-address {
     border-radius: 4px 0 0 4px;
-    background-color: #ef5350; }
+    background-color: #ef5350;
+    display: inline-flex;
+    flex-direction: column;
+    height: 20%; }
   #location-meta-card .location-phone-card {
     padding: 18px;
     float: right;
     border-radius: 8px;
     margin-right: 25%;
     background-color: #ef5350; }
-
-.float-right {
-  float: right; }
-
-.font-header-1 {
-  font-size: 3em;
-  font-weight: bolder; }
-
-.font-header-2, .section, .section-image {
-  font-size: 2em;
-  font-weight: bolder; }
-
-.font-header-3 {
-  font-size: 1em;
-  font-weight: bold; }
-
-.font-body-copy, .card {
-  font-size: 1em; }
 
 #body {
   position: absolute;
