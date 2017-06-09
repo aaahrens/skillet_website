@@ -21,8 +21,6 @@
 .card {
   background-color: gray;
   margin: 18px auto;
-  max-width: 997px;
-  border-radius: 8px;
   padding: 18px; }
   .card img {
     width: 100%;

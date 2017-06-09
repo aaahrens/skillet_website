@@ -1,5 +1,5 @@
-import store from '../src/store/serverStore'
-import Routes from '../src/routes'
+import store from './src/store/serverStore'
+import Routes from './src/Routes'
 import React from 'react'
 import path from 'path'
 import {StaticRouter} from 'react-router-dom'
@@ -18,7 +18,9 @@ const universalLoader = (req, res) => {
 			console.error('read err', err)
 			return res.status(404).end()
 		}
-		const context = {};
+		const context = {
+
+		};
 
 		const markup = ReactDOMServer.renderToString(
 			<Provider store={store}>
