@@ -35,9 +35,13 @@ const MenuCollection = () => {
 }
 
 function filterMenu(list) {
-	var pharsedMenu = MenuCollection();
+	var pharsedMenu = {
+		skillets: Immutable.List(),
+		plates: Immutable.List(),
+		beverages: Immutable.List()
+	};
 
-	list.payload.forEach((obj) => {
+	list.forEach((obj) => {
 		switch (obj.section) {
 			case 'Skillets':
 				pharsedMenu.skillets = pharsedMenu.skillets.push(obj);

@@ -8,19 +8,10 @@ import Footer from './Footer'
 
 
 const Menu = (props) => {
-
+    console.log(props.menu);
     return (
         <div id="body">
             <div id="content">
-				{
-					props.menu.map((item, index) => {
-						return (
-							<div key={index}>
-								{JSON.stringify(item)}
-							</div>
-						)
-					})
-				}
             </div>
             <Footer/>
         </div>
