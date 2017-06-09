@@ -13,6 +13,7 @@
 .font-body-copy {
   font-size: 1em; }
 
+<<<<<<< HEAD
 .font-header-1 {
   font-size: 3em;
   font-weight: bolder; }
@@ -28,6 +29,8 @@
 .font-body-copy {
   font-size: 1em; }
 
+=======
+>>>>>>> a30db5cd09574c43760d5588ce5aeeb7db5d4a4b
 #location-meta-card {
   float: left;
   position: absolute;
@@ -45,6 +48,24 @@
 
 .float-right {
   float: right; }
+<<<<<<< HEAD
+=======
+
+.font-header-1 {
+  font-size: 3em;
+  font-weight: bolder; }
+
+.font-header-2 {
+  font-size: 2em;
+  font-weight: bolder; }
+
+.font-header-3 {
+  font-size: 1em;
+  font-weight: bold; }
+
+.font-body-copy {
+  font-size: 1em; }
+>>>>>>> a30db5cd09574c43760d5588ce5aeeb7db5d4a4b
 
 #body {
   position: absolute;

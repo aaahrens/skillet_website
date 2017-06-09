@@ -92,6 +92,7 @@
   font-size: 3em;
   font-weight: bolder; }
 
+<<<<<<< HEAD
 .font-header-2, .section, .section-image {
   font-size: 2em;
   font-weight: bolder; }
@@ -107,6 +108,8 @@
   font-size: 3em;
   font-weight: bolder; }
 
+=======
+>>>>>>> a30db5cd09574c43760d5588ce5aeeb7db5d4a4b
 .font-header-2, .section, .section-image {
   font-size: 2em;
   font-weight: bolder; }
@@ -135,6 +138,21 @@
 
 .float-right {
   float: right; }
+
+.font-header-1 {
+  font-size: 3em;
+  font-weight: bolder; }
+
+.font-header-2, .section, .section-image {
+  font-size: 2em;
+  font-weight: bolder; }
+
+.font-header-3 {
+  font-size: 1em;
+  font-weight: bold; }
+
+.font-body-copy, .card {
+  font-size: 1em; }
 
 #body {
   position: absolute;
