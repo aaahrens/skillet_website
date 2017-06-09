@@ -1,5 +1,5 @@
-import React from 'react'
-import {connect} from 'react-redux'
+import React from "react";
+import {connect} from "react-redux";
 
 const Card = (props) => {
 	this.render = () => {
@@ -20,10 +20,6 @@ const Card = (props) => {
 }
 
 export default connect(
-    (state) => ({
-
-    }),
-    (dispatch) => ({
-
-    })
+	(state) => ({}),
+	(dispatch) => ({})
 )(Card)

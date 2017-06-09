@@ -1,22 +1,57 @@
 @import './variables/colors.sass'
 @import './mixins.sass'
 @import './pages.sass'
+@import './variables/sizes.sass'
+@import './mixins.sass'
+
 #body
+  position: absolute
+  left: 0
+  top: 300px
   flex: 1
+  width: 100%
   display: inline-flex
   flex-direction: column
+  overflow-y: scroll
   background: url('./images/tree.png') repeat
+  min-height: calc(100% - 300px)
+  @include breakpoint($tablet)
+    top: $header-size-mobile
   #content
-    flex: 1
+    //100 height - size of header -  size of footer feel free to make variable although probs gonna be this only time
+    min-height: calc(100vh - #{$header-size})
+    align-items: center
+    justify-content: center
+    display: inline-flex
+    flex-direction: column
+    flex-grow: 1
+    @include breakpoint($tablet)
+      min-height: calc(100vh - #{$header-size-mobile})
+    > .card
+      height: 100%
+      background: whitesmoke
+      flex: 1
+      +big_ass_shadow()
+      &:only-child
+        padding: 20px
+        margin: 50px
   #footer
     align-self: flex-end
     justify-self: flex-end
     align-content: center
-    justify-content: center
-    background: $footer-color
-    flex-direction: column
+    justify-content: flex-start
+    background: $footer
+    flex-direction: row
+    flex-wrap: wrap
+    display: flex
     width: 100%
-    height: 75px
+    position: relative
+    bottom: 0
       +shadow()
     #footer-line
       text-align: center
+      margin: 25px
+      &:first-child
+        margin-left: 100px
+
+

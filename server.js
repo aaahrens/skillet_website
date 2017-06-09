@@ -24,7 +24,7 @@ server.use(morgan('combined'));
 server.use('/', router);
 
 // Serve static assets
-server.use(express.static(path.resolve(__dirname, '..', 'build')));
+server.use(express.static(path.resolve(__dirname, '.', 'build')));
 
 server.use('/', universalLoader);
 

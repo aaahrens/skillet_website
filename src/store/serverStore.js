@@ -2,13 +2,13 @@
  * Created by drunkengranite on 6/3/17.
  */
 
-import allReducers from '../reducers/all.reducers'
-import {createStore, applyMiddleware} from 'redux';
-import thunk from 'redux-thunk';
+import allReducers from "../reducers/all.reducers";
+import {applyMiddleware, createStore} from "redux";
+import thunk from "redux-thunk";
 
 
 const middleware = applyMiddleware(
-    thunk
+	thunk
 );
 
 const store = createStore(allReducers, middleware);

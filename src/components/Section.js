@@ -1,5 +1,5 @@
-import React from 'react'
-import {connect} from 'react-redux'
+import React from "react";
+import {connect} from "react-redux";
 
 const SectionCard = (props) => {
 	this.render = () => {
@@ -19,10 +19,6 @@ const SectionCard = (props) => {
 }
 
 export default connect(
-	(state) => ({
-
-	}),
-	(dispatch) => ({
-
-	})
+	(state) => ({}),
+	(dispatch) => ({})
 )(SectionCard)
