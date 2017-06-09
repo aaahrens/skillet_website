@@ -36,8 +36,7 @@
   align-content: center;
   justify-content: center;
   align-items: center;
-  background: #f9f9f9;
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.25); }
+  background: #f9f9f9; }
   @media (max-width: 768px) {
     .header {
       height: 120px; } }
@@ -51,18 +50,22 @@
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.25); }
     @media (max-width: 768px) {
       .header #logo-container {
-        height: 75px; } }
+        height: 75px;
+        width: 100%; } }
   .header #button-container {
-    width: 100%;
+    width: 30%;
     justify-content: center;
     display: inline-flex;
     align-items: center;
     flex-grow: 1;
     flex-basis: 0; }
+    @media (max-width: 768px) {
+      .header #button-container {
+        width: 100%; } }
     .header #button-container .menu-button {
       margin: 5px;
       flex: 1;
-      width: 50px;
+      width: 0;
       text-align: center;
       display: inline-block; }
       .header #button-container .menu-button[data="true"] {
@@ -138,51 +141,34 @@
   left: 0;
   top: 300px;
   flex: 1;
+  background: #eee;
   width: 100%;
   display: inline-flex;
   flex-direction: column;
   overflow-y: scroll;
-  background: url("./images/tree.png") repeat;
   min-height: calc(100% - 300px); }
   @media (max-width: 768px) {
     #body {
-      top: 120px; } }
-  #body #content {
-    min-height: calc(100vh - 300px);
-    align-items: center;
-    justify-content: center;
-    display: inline-flex;
-    flex-direction: column;
-    flex-grow: 1; }
-    @media (max-width: 768px) {
-      #body #content {
-        min-height: calc(100vh - 120px); } }
-    #body #content > .card {
-      height: 100%;
-      background: whitesmoke;
-      flex: 1;
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.35); }
-      #body #content > .card:only-child {
-        padding: 20px;
-        margin: 50px; }
+      top: 120px;
+      min-height: calc(100% - 120px); } }
+  #body > .card {
+    height: 100%;
+    background: whitesmoke;
+    flex: 1;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.35); }
+    #body > .card:only-child {
+      padding: 20px;
+      margin: 50px; }
   #body #footer {
-    align-self: flex-end;
-    justify-self: flex-end;
-    align-content: center;
-    justify-content: flex-start;
-    background: #d0d0d0;
-    flex-direction: row;
-    flex-wrap: wrap;
-    display: flex;
+    border-top: thin solid #757575;
     width: 100%;
     position: relative;
     bottom: 0;
     bottom-box-shadow: 0 8px 15px rgba(0, 0, 0, 0.25); }
     #body #footer #footer-line {
+      color: #757575;
       text-align: center;
       margin: 25px; }
-      #body #footer #footer-line:first-child {
-        margin-left: 100px; }
 
 .font-header-1 {
   font-size: 3em;

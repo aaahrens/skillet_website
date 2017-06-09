@@ -10,9 +10,7 @@ const Gallery = (props) => {
 
 	return (
 		<div id="body">
-			<div id="content">
 
-			</div>
 			<Footer/>
 		</div>
 	)
