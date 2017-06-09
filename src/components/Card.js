@@ -10,9 +10,11 @@ const Card = (props) => {
 		else
 			return "";
 	}
+	var classes = "card " + props.className;
 	return (
-		<div className="card">
+		<div id={props.id} className={classes}>
 			{this.render()}
+			{props.children}
 		</div>
 	)
 }

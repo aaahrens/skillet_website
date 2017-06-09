@@ -13,6 +13,7 @@ const SectionCard = (props) => {
 	return (
 		<div className="section-image">
 			{this.render()}
+			{props.children}
 		</div>
 	)
 }

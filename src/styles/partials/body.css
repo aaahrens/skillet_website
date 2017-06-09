@@ -13,6 +13,24 @@
 .font-body-copy {
   font-size: 1em; }
 
+#location-meta-card {
+  float: left;
+  position: absolute;
+  right: 0; }
+  #location-meta-card .location-meta-card {
+    padding: 24px 25% 24px 18px;
+    border-radius: 4px 0 0 4px;
+    background-color: #e16a57; }
+  #location-meta-card .location-phone-card {
+    padding: 18px;
+    float: right;
+    border-radius: 8px;
+    margin-right: 25%;
+    background-color: #e16a57; }
+
+.float-right {
+  float: right; }
+
 #body {
   flex: 1;
   display: inline-flex;
