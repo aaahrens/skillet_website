@@ -2,7 +2,7 @@
   font-size: 3em;
   font-weight: bolder; }
 
-.font-header-2, .section {
+.font-header-2, .section, .section-image {
   font-size: 2em;
   font-weight: bolder; }
 
@@ -17,7 +17,7 @@
   font-size: 3em;
   font-weight: bolder; }
 
-.font-header-2, .section {
+.font-header-2, .section, .section-image {
   font-size: 2em;
   font-weight: bolder; }
 
@@ -89,7 +89,7 @@
   font-size: 3em;
   font-weight: bolder; }
 
-.font-header-2, .section {
+.font-header-2, .section, .section-image {
   font-size: 2em;
   font-weight: bolder; }
 
@@ -100,11 +100,29 @@
 .font-body-copy, .card {
   font-size: 1em; }
 
+#location-meta-card {
+  float: left;
+  position: absolute;
+  right: 0; }
+  #location-meta-card .location-meta-card {
+    padding: 24px 25% 24px 18px;
+    border-radius: 4px 0 0 4px;
+    background-color: #ef5350; }
+  #location-meta-card .location-phone-card {
+    padding: 18px;
+    float: right;
+    border-radius: 8px;
+    margin-right: 25%;
+    background-color: #ef5350; }
+
+.float-right {
+  float: right; }
+
 .font-header-1 {
   font-size: 3em;
   font-weight: bolder; }
 
-.font-header-2, .section {
+.font-header-2, .section, .section-image {
   font-size: 2em;
   font-weight: bolder; }
 
@@ -170,7 +188,7 @@
   font-size: 3em;
   font-weight: bolder; }
 
-.font-header-2, .section {
+.font-header-2, .section, .section-image {
   font-size: 2em;
   font-weight: bolder; }
 
@@ -181,10 +199,17 @@
 .font-body-copy, .card {
   font-size: 1em; }
 
-.section {
+.section, .section-image {
   text-align: center;
   background-color: cadetblue;
   padding: 18px; }
+
+.section-image {
+  background-color: unset;
+  padding: unset; }
+  .section-image img {
+    object-fit: fill;
+    width: 100%; }
 
 .card {
   background-color: gray;
