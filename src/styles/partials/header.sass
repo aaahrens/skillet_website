@@ -11,7 +11,6 @@
   justify-content: center
   align-items: center
   background: $background
-  +shadow()
   @include breakpoint($tablet)
     height: $header-size-mobile
 
@@ -25,18 +24,21 @@
     +shadow()
     @include breakpoint($tablet)
       height: 75px
+      width: 100%
 
   #button-container
-    width: 100%
+    width: 30%
     justify-content: center
     display: inline-flex
     align-items: center
     flex-grow: 1
     flex-basis: 0
+    @include breakpoint($tablet)
+      width: 100%
     .menu-button
       margin: 5px
       flex: 1
-      width: 50px
+      width: 0
       text-align: center
       display: inline-block
       &[data="true"]

@@ -11,9 +11,7 @@ const About = (props) => {
 
 	return (
 		<div id="body">
-			<div id="content">
-				<Card text={props.text}/>
-			</div>
+			<Card text={props.text}/>
 			<Footer/>
 		</div>
 	)
