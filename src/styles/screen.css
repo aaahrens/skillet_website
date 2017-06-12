@@ -172,22 +172,33 @@
   @media (max-width: 768px) {
     #location-meta-card {
       min-height: calc(100vh - 120px); } }
-  #location-meta-card .location-container {
+  #location-meta-card .location-container, #location-meta-card .map-container {
     flex: 1;
     display: inline-flex;
     flex-direction: column; }
-  #location-meta-card .location-address {
-    border-radius: 4px 0 0 4px;
-    background-color: #ef5350;
-    display: inline-flex;
-    flex-direction: column;
-    height: 20%; }
-  #location-meta-card .location-phone-card {
-    padding: 18px;
-    float: right;
-    border-radius: 8px;
-    margin-right: 25%;
-    background-color: #ef5350; }
+  #location-meta-card .map-container {
+    padding: 8px;
+    margin-left: 15%; }
+  #location-meta-card .location-container {
+    padding: 8px 0 0 8px; }
+    #location-meta-card .location-container .address {
+      display: inline-flex;
+      flex-direction: column;
+      border-radius: 4px 0 0 4px;
+      background-color: #ef5350;
+      padding: 18px 25% 18px 18px; }
+      #location-meta-card .location-container .address text.font-header-3 {
+        padding-top: 8px; }
+      #location-meta-card .location-container .address .hours {
+        display: inline-flex;
+        flex-direction: row;
+        justify-content: space-between; }
+    #location-meta-card .location-container .phone-card {
+      padding: 18px;
+      align-self: flex-end;
+      border-radius: 8px;
+      margin-right: 25%;
+      background-color: #ef5350; }
 
 * {
   -webkit-box-sizing: border-box;
