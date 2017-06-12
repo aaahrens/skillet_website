@@ -100,6 +100,21 @@
 .font-body-copy, .card {
   font-size: 1em; }
 
+.font-header-1 {
+  font-size: 3em;
+  font-weight: bolder; }
+
+.font-header-2, .section, .section-image {
+  font-size: 2em;
+  font-weight: bolder; }
+
+.font-header-3 {
+  font-size: 1em;
+  font-weight: bold; }
+
+.font-body-copy, .card {
+  font-size: 1em; }
+
 #location-meta-card {
   float: left;
   position: absolute;
@@ -117,21 +132,6 @@
 
 .float-right {
   float: right; }
-
-.font-header-1 {
-  font-size: 3em;
-  font-weight: bolder; }
-
-.font-header-2, .section, .section-image {
-  font-size: 2em;
-  font-weight: bolder; }
-
-.font-header-3 {
-  font-size: 1em;
-  font-weight: bold; }
-
-.font-body-copy, .card {
-  font-size: 1em; }
 
 #body {
   position: absolute;
@@ -219,6 +219,39 @@
     width: 100%;
     height: 560px;
     object-fit: cover; }
+
+.font-header-1 {
+  font-size: 3em;
+  font-weight: bolder; }
+
+.font-header-2, .section, .section-image {
+  font-size: 2em;
+  font-weight: bolder; }
+
+.font-header-3 {
+  font-size: 1em;
+  font-weight: bold; }
+
+.font-body-copy, .card {
+  font-size: 1em; }
+
+#location-meta-card {
+  float: left;
+  position: absolute;
+  right: 0; }
+  #location-meta-card .location-meta-card {
+    padding: 24px 25% 24px 18px;
+    border-radius: 4px 0 0 4px;
+    background-color: #ef5350; }
+  #location-meta-card .location-phone-card {
+    padding: 18px;
+    float: right;
+    border-radius: 8px;
+    margin-right: 25%;
+    background-color: #ef5350; }
+
+.float-right {
+  float: right; }
 
 * {
   -webkit-box-sizing: border-box;
