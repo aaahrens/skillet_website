@@ -204,6 +204,40 @@
     height: 560px;
     object-fit: cover; }
 
+.carousel {
+  width: 640px;
+  height: 640px;
+  overflow: hidden;
+  position: relative; }
+  .carousel .inner {
+    display: flex;
+    position: absolute;
+    left: 0; }
+    .carousel .inner img {
+      background-color: gray;
+      width: 640px;
+      height: 640px;
+      border: blue 2px; }
+  .carousel .next::after, .carousel .prev::after {
+    content: '>';
+    position: absolute;
+    top: 50%;
+    right: 0;
+    background-color: white;
+    width: 1em;
+    height: 3em;
+    transform: translateY(-50%);
+    line-height: 3em;
+    box-sizing: border-box;
+    padding: 0 0.1em;
+    cursor: pointer;
+    opacity: 0.25; }
+  .carousel .next:hover::after, .carousel .prev:hover::after {
+    opacity: 1; }
+  .carousel .prev::after {
+    content: '<';
+    left: 0; }
+
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box; }

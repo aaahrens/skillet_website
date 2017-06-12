@@ -7,13 +7,13 @@
 import React from "react";
 import {connect} from "react-redux";
 import Footer from "../Footer";
-import Card from "../Card";
+import Carousel from "../Carousel";
 
 const Home = (props) => {
 
 	return (
 		<div id="body">
-			<Card text="i am a home body"/>
+			<Carousel data={[]} />
 			<Footer />
 		</div>
 	)
