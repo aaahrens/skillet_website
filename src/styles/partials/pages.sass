@@ -40,3 +40,24 @@
       border-radius: 8px
       margin-right: 25%
       background-color: $primary
+
+@include breakpoint($phone)
+  #location-meta-card
+    flex-direction: column-reverse
+    min-height: unset
+    padding: 8px 5%
+    @include breakpoint($tablet)
+    .location-container, .map-container
+      padding: unset
+      margin: unset
+    .map-container
+    .location-container
+      .address
+        padding: 18px
+        text.font-header-3
+        .hours
+      .phone-card
+        padding: 18px
+        align-self: stretch
+        text-align: center
+        margin-right: unset
