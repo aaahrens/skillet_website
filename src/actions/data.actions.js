@@ -1,5 +1,6 @@
 import {LOAD_MENU, SpreadSheetURL} from "../constants/constants";
 import axios from "axios";
+import Immutable from 'immutable'
 
 export const getMenu = () => {
 	return (dispatch, getState) => {
@@ -8,6 +9,7 @@ export const getMenu = () => {
 				console.log(response.data)
 				let arr = response.data.split(",");
 				console.log(arr)
+				dispatch(loadMenu(Immutable.List()))
 			})
 			.catch((error) => {
 				console.log(error)
