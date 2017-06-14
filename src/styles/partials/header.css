@@ -36,7 +36,9 @@
   align-content: center;
   justify-content: center;
   align-items: center;
-  background: #f9f9f9; }
+  background: #f9f9f9;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.25);
+  z-index: 1; }
   @media (max-width: 768px) {
     .header {
       height: 120px; } }
@@ -46,8 +48,7 @@
     width: 100%;
     display: inline-flex;
     align-items: center;
-    justify-content: center;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.25); }
+    justify-content: center; }
     @media (max-width: 768px) {
       .header #logo-container {
         height: 75px;

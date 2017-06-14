@@ -13,6 +13,10 @@ const Menu = (props) => {
 	return (
 		<div id="body">
 			{
+				props.menu.size === 0 ? <div>show loading</div> : null
+			}
+
+			{
 				props.menu.map((item, index) => {
 					return (
 						<div key={index} className="menu-section">
@@ -24,22 +28,21 @@ const Menu = (props) => {
 									{item.get("Description")}
 								</div>
 							</div>
-							{
-								item.get("Items").map((item, index) =>
+							<div className="menu-items-container">
+								{
+									item.get("Items").map((item, index) =>
 
-									<div key={index} className="menu-item">
-										<div className="content">
-											{item.get("Name")}
+										<div key={index} className="menu-item">
+											<div className="content">
+												{item.get("Name")} {" " + item.get("Description")}
+											</div>
+											<div className="content">
+												{item.get("Price")}
+											</div>
 										</div>
-										<div className="content" placeholder="true">
-
-										</div>
-										<div className="content">
-											{item.get("Price")}
-										</div>
-									</div>
-								)
-							}
+									)
+								}
+							</div>
 						</div>
 					)
 				})

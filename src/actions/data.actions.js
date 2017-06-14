@@ -25,8 +25,11 @@ export const getMenu = () => {
 					.map((item) => Immutable.Map()
 						.set("Name", item[0])
 						.set("Price", item[1])
-						.set("Description", item[2])
-						.set("Section", item[3]));
+						.set("Description", item[3])
+						.set("Section", item[2]));
+
+
+				console.dir(Items.toJS());
 
 				//eh good enough for efficiency
 				const Menu = Immutable.fromJS(menu.data.split("\n"))
@@ -34,6 +37,8 @@ export const getMenu = () => {
 					.map((item) => {
 						let arr = item.split(',');
 						let result =  arr.splice(0, 1);
+						//generic errors
+						result[0].replace(" ","" );
 						result.push(arr.join(","));
 						return result
 					})
@@ -43,7 +48,6 @@ export const getMenu = () => {
 						.set("Description", header[1])
 						.set("Items", Items.filter(
 							(meal) => {
-								console.log(meal.get("Section").trim(), header[0])
 								return meal.get("Section").trim() === header[0]
 							})
 						));
