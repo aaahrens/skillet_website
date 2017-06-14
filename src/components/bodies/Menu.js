@@ -12,23 +12,56 @@ const Menu = (props) => {
 
 	return (
 		<div id="body">
-			<Card text={props.text}/>
-			<Card text={props.text}/>
-			<Card text={props.text}/>
-			<Card text={props.text}/>
-			<Card text={props.text}/>
-			{/*<Card text={props.text}/>*/}
-			{/*<Card text={props.text}/>*/}
-			{/*<Card text={props.text}/>*/}
+			{
+				props.menu.map((item, index) => {
+					return (
+						<div key={index} className="menu-section">
+							<div className="menu-title">
+								<div>
+									{item.get("Name")}
+								</div>
+								<div>
+									{item.get("Description")}
+								</div>
+							</div>
+							{
+								item.get("Items").map((item, index) =>
+
+									<div key={index} className="menu-item">
+										<div className="content">
+											{item.get("Name")}
+										</div>
+										<div className="content" placeholder="true">
+
+										</div>
+										<div className="content">
+											{item.get("Price")}
+										</div>
+									</div>
+								)
+							}
+						</div>
+					)
+				})
+			}
+
 			<Footer/>
 		</div>
 	)
 };
 
+const MenuItem = (props) => {
+	return (
+		<div>
+
+		</div>
+	)
+};
 
 export default connect(
 	(state) => ({
-		text: state.data.placeHolder
+		text: state.data.placeHolder,
+		menu: state.data.menu
 	}),
 	(dispatch) => ({})
 )(Menu)

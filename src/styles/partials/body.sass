@@ -8,12 +8,13 @@
   left: 0
   top: $header-size
   flex: 1
-  background: #eee
   width: 100%
   display: inline-flex
   flex-direction: column
   overflow-y: scroll
   min-height: calc(100% - #{$header-size})
+  //background-image: url("./partials/new-planks-laid-evenly-close-up_1194-7472.jpg")
+  background: #d1b599
   @include breakpoint($tablet)
     top: $header-size-mobile
     min-height: calc(100% - #{$header-size-mobile})
@@ -30,6 +31,7 @@
     width: 100%
     position: relative
     bottom: 0
+    background: #eee
       +shadow()
     #footer-line
       color: #757575

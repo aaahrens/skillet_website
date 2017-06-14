@@ -1,0 +1,39 @@
+@import "./mixins.sass"
+.menu-section
+  background: #eeeeee
+  margin: 10px
+  display: inline-flex
+  flex-direction: row
+  flex-wrap: wrap
+  padding: 20px
+  align-items: flex-end
+  +shadow()
+  .menu-title
+    display: flex
+    width: 33.33%
+    flex-grow: 1
+    flex-shrink: 1
+    margin: 10px
+    flex-direction: column
+  .menu-item
+    height: 25px
+    width: 33.33%
+    border-bottom: thin solid #757575
+    flex-grow: 1
+    margin: 10px
+    flex-shrink: 1
+    display: inline-flex
+    flex-direction: row
+    .content
+      flex: 1
+      display: inline-flex
+      flex-direction: row
+      align-items: flex-end
+      &:last-child
+        display: flex
+        text-align: center
+        justify-content: flex-end
+
+
+
+
