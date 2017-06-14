@@ -7,7 +7,7 @@ import {Route, Switch} from "react-router";
 import Header from "./components/Header";
 import Location from "./components/bodies/Location";
 import About from "./components/bodies/About";
-import Menu from "./components/Menu";
+import Menu from "./components/bodies/Menu";
 import Home from "./components/bodies/Home";
 import Gallery from "./components/bodies/Gallery";
 import {connect} from "react-redux";

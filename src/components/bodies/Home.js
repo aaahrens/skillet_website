@@ -8,12 +8,21 @@ import React from "react";
 import {connect} from "react-redux";
 import Footer from "../Footer";
 import Card from "../Card";
+import img1 from './EX3i8.jpg'
+import img2 from './about-image.png'
 
 const Home = (props) => {
 
 	return (
 		<div id="body">
-			<Card text="i am a home body"/>
+			<div className="home-body">
+
+
+
+			</div>
+			<div>
+				hello
+			</div>
 			<Footer />
 		</div>
 	)

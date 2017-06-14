@@ -1,4 +1,5 @@
 import store from './src/store/serverStore'
+import * as actions from './src/actions/data.actions'
 import Routes from './src/Routes'
 import React from 'react'
 import path from 'path'
@@ -9,9 +10,11 @@ import {Provider} from 'react-redux'
 const fs = require('fs');
 
 
+
+
+
 const universalLoader = (req, res) => {
-	const filePath = path.resolve(__dirname, '..', 'build', 'index.html')
-	axios.get("").then((response) => console.log(response)).catch((error) => console.log(error))
+	const filePath = path.resolve(__dirname, '.', 'build', 'index.html')
 
 	fs.readFile(filePath, 'utf8', (err, htmlData) => {
 		if (err) {
