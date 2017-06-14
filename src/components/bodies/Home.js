@@ -7,13 +7,29 @@
 import React from "react";
 import {connect} from "react-redux";
 import Footer from "../Footer";
-import Carousel from "../Carousel";
+import Card from "../Card";
+import MenuItem from '../MenuItem';
 
 const Home = (props) => {
+	this.renderTopItemsList = () => {
+		return (
+			props.featuredItems.map(function(item) {
+				return (
+					<MenuItem item={item} />
+				)
+			})
+		)
+	};
 
 	return (
 		<div id="body">
-			<Carousel data={[]} />
+			<Card text="carousel here" />
+			<div className="section">
+				Featured Menu Items
+			</div>
+			<div id="top-menu-list">
+				{this.renderTopItemsList()}
+			</div>
 			<Footer />
 		</div>
 	)
@@ -21,6 +37,8 @@ const Home = (props) => {
 
 
 export default connect(
-	(state) => ({}),
+	(state) => ({
+		featuredItems: state.data.featuredItems
+	}),
 	(dispatch) => ({})
 )(Home)
