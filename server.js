@@ -19,7 +19,7 @@ server.use(bodyParser.json());
 server.use(bodyParser.urlencoded({extended: false}));
 
 // Setup logger
-server.use(morgan('combined'));
+// server.use(morgan('combined'));
 
 server.use('/', router);
 

@@ -47,7 +47,7 @@
     flex-direction: column; }
   #location-meta-card .location-address {
     border-radius: 4px 0 0 4px;
-    background-color: #ef5350;
+    background-color: #e57373;
     display: inline-flex;
     flex-direction: column;
     height: 20%; }
@@ -56,4 +56,4 @@
     float: right;
     border-radius: 8px;
     margin-right: 25%;
-    background-color: #ef5350; }
+    background-color: #e57373; }
