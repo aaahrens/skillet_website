@@ -11,7 +11,6 @@ const Gallery = (props) => {
 	return (
 		<div id="body">
 
-			<Footer/>
 		</div>
 	)
 };

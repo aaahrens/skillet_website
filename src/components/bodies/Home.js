@@ -10,20 +10,30 @@ import Footer from "../Footer";
 import Card from "../Card";
 import img1 from './EX3i8.jpg'
 import img2 from './about-image.png'
+import Slider from 'react-slick'
 
 const Home = (props) => {
-
+	var settings = {
+		dots: false,
+		infinite: true,
+		speed: 5,
+		autoplay: true,
+		autoplaySpeed: 5000,
+		className: "home-body",
+		arrows: false,
+		useCSS: true,
+	};
+	
 	return (
 		<div id="body">
-			<div className="home-body">
-
-
-
-			</div>
-			<div>
-				hello
-			</div>
-			<Footer />
+				<Slider {...settings}>
+					<div id="home-item">
+						<img src={img2}/>
+					</div>
+					<div id="home-item">
+						<img src={img1}/>
+					</div>
+				</Slider>
 		</div>
 	)
 };

@@ -20,8 +20,14 @@ export const getMenu = () => {
 
 				const Items = Immutable.fromJS((items.data.split("\n")))
 					.remove(0)
-					.map(item => item.split(","))
-					.filter((item) => item.length === 4)
+					.map(item => {
+						let arr = item.split(',');
+						let result =  arr.splice(0, 3);
+						//generic errors
+						result[0].replace(" ","");
+						result.push(arr.join(","));
+						return result
+					})
 					.map((item) => Immutable.Map()
 						.set("Name", item[0])
 						.set("Price", item[1])
@@ -29,7 +35,6 @@ export const getMenu = () => {
 						.set("Section", item[2]));
 
 
-				console.dir(Items.toJS());
 
 				//eh good enough for efficiency
 				const Menu = Immutable.fromJS(menu.data.split("\n"))

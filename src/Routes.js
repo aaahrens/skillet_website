@@ -10,6 +10,7 @@ import About from "./components/bodies/About";
 import Menu from "./components/bodies/Menu";
 import Home from "./components/bodies/Home";
 import Gallery from "./components/bodies/Gallery";
+import Footer from "./components/Footer";
 import {connect} from "react-redux";
 import * as data from "./actions/data.actions";
 import {withRouter} from "react-router-dom";
@@ -38,6 +39,7 @@ class Routes extends React.Component {
 					<Route path="/gallery" component={Gallery}/>
 					<Route path="/" component={Home}/>
 				</Switch>
+			 	<Route path="/" component={Footer}/>
 			</div>
 		)
 	}

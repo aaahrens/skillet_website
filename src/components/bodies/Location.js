@@ -26,7 +26,6 @@ const Location = (props) => {
 					<div className="location-phone-card">(707) 123-4567</div>
 				</div>
 			</div>
-			<Footer/>
 		</div>
 	)
 };

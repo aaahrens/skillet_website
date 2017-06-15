@@ -34,10 +34,10 @@ const Menu = (props) => {
 
 										<div key={index} className="menu-item">
 											<div className="content">
-												{item.get("Name")} {" " + item.get("Description")}
+												{item.get("Name") + " " + item.get("Price")}
 											</div>
 											<div className="content">
-												{item.get("Price")}
+												{item.get("Description")}
 											</div>
 										</div>
 									)
@@ -47,8 +47,6 @@ const Menu = (props) => {
 					)
 				})
 			}
-
-			<Footer/>
 		</div>
 	)
 };

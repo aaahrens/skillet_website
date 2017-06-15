@@ -12,7 +12,6 @@ const About = (props) => {
 	return (
 		<div id="body">
 			<Card text={props.text}/>
-			<Footer/>
 		</div>
 	)
 };
