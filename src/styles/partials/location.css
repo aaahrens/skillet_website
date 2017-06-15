@@ -22,11 +22,6 @@
 .font-body-copy {
   font-size: 1em; }
 
-#top-menu-list {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap; }
-
 #location-meta-card {
   position: relative;
   right: 0;
