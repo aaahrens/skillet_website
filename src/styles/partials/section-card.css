@@ -30,7 +30,7 @@
 .section-image {
   background-color: unset;
   padding: unset; }
-  .section-image img {
+  .section-image > img {
     object-fit: fill;
     width: 100%; }
 
