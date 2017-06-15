@@ -19,12 +19,12 @@ const Home = (props) => {
 		infinite: true,
 		speed: 5,
 		autoplay: true,
-		autoplaySpeed: 5000,
+		autoplaySpeed: 1000,
 		className: "home-body",
 		arrows: false,
 		useCSS: true,
 	};
-	
+
 	return (
 		<div id="body">
 				<Slider {...settings}>
@@ -35,7 +35,6 @@ const Home = (props) => {
 						<img src={img1}/>
 					</div>
 				</Slider>
-
 		</div>
 	)
 };

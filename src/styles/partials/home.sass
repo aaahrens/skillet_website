@@ -4,10 +4,13 @@
   display: flex
   flex-direction: column
   flex-wrap: nowrap
+
 .home-body
   height: calc(100vh - #{$header-size} - #{$footer-size})
   margin: 20px
   +shadow()
+  @include breakpoint($tablet)
+    margin: 0
   #home-item
     height: calc(100vh - #{$header-size} - #{$footer-size})
     display: flex
