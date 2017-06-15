@@ -8,6 +8,7 @@ import React from "react";
 import {connect} from "react-redux";
 import Footer from "../Footer";
 import Card from "../Card";
+import MenuItem from '../MenuItem';
 import img1 from './EX3i8.jpg'
 import img2 from './about-image.png'
 import Slider from 'react-slick'
@@ -34,12 +35,15 @@ const Home = (props) => {
 						<img src={img1}/>
 					</div>
 				</Slider>
+
 		</div>
 	)
 };
 
 
 export default connect(
-	(state) => ({}),
+	(state) => ({
+		featuredItems: state.data.featuredItems
+	}),
 	(dispatch) => ({})
 )(Home)

@@ -4,7 +4,7 @@ import {connect} from "react-redux";
 const Card = (props) => {
 	return (
 		<div className="card">
-			{props.text}
+			<text>{props.text}</text>
 		</div>
 	)
 }

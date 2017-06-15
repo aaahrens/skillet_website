@@ -1,14 +1,23 @@
 .font-header-1 {
   font-size: 3em;
-  font-weight: bolder; }
+  font-weight: bolder;
+  margin-top: 8px;
+  margin-bottom: 16px; }
 
 .font-header-2 {
   font-size: 2em;
-  font-weight: bolder; }
+  font-weight: bolder;
+  margin-top: 8px;
+  margin-bottom: 8px; }
 
 .font-header-3 {
   font-size: 1em;
-  font-weight: bold; }
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 0; }
+
+.font-caption {
+  font-size: 0.85em; }
 
 .font-body-copy {
   font-size: 1em; }
