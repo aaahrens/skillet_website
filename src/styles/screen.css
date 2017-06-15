@@ -133,56 +133,63 @@
 .font-body-copy, .card {
   font-size: 1em; }
 
-.font-header-1 {
-  font-size: 3em;
-  font-weight: bolder;
-  margin-top: 8px;
-  margin-bottom: 16px; }
-
-.font-header-2, .section, .section-image {
-  font-size: 2em;
-  font-weight: bolder;
-  margin-top: 8px;
-  margin-bottom: 8px; }
-
-.font-header-3 {
-  font-size: 1em;
-  font-weight: bold;
-  margin-top: 0;
-  margin-bottom: 0; }
-
-.font-caption {
-  font-size: 0.85em; }
-
-.font-body-copy, .card {
-  font-size: 1em; }
-
 #location-meta-card {
+  position: relative;
+  right: 0;
+  top: 0;
   display: inline-flex;
   background: url("./location.png") no-repeat;
   background-size: cover;
+  min-height: calc(100vh - 300px);
   flex-direction: row;
   flex-wrap: nowrap;
   flex-grow: 1; }
   @media (max-width: 768px) {
     #location-meta-card {
       min-height: calc(100vh - 120px); } }
-  #location-meta-card .location-container {
+  #location-meta-card .location-container, #location-meta-card .map-container {
     flex: 1;
     display: inline-flex;
     flex-direction: column; }
-  #location-meta-card .location-address {
-    border-radius: 4px 0 0 4px;
-    background-color: #e57373;
-    display: inline-flex;
-    flex-direction: column;
-    height: 20%; }
-  #location-meta-card .location-phone-card {
-    padding: 18px;
-    float: right;
-    border-radius: 8px;
-    margin-right: 25%;
-    background-color: #e57373; }
+  #location-meta-card .map-container {
+    padding: 8px;
+    margin-left: 15%; }
+  #location-meta-card .location-container {
+    padding: 8px 0 0 8px; }
+    #location-meta-card .location-container .address {
+      display: inline-flex;
+      flex-direction: column;
+      border-radius: 4px 0 0 4px;
+      background-color: #e57373;
+      padding: 18px 25% 18px 18px; }
+      #location-meta-card .location-container .address text.font-header-3 {
+        padding-top: 8px; }
+      #location-meta-card .location-container .address .hours {
+        display: inline-flex;
+        flex-direction: row;
+        justify-content: space-between; }
+    #location-meta-card .location-container .phone-card {
+      padding: 18px;
+      align-self: flex-end;
+      border-radius: 8px;
+      margin-right: 25%;
+      background-color: #e57373; }
+
+@media (max-width: 768px) {
+  #location-meta-card {
+    flex-direction: column-reverse;
+    min-height: unset;
+    padding: 8px 5%; }
+    #location-meta-card .location-container, #location-meta-card .map-container {
+      padding: unset;
+      margin: unset; }
+    #location-meta-card .location-container .address {
+      padding: 18px; }
+    #location-meta-card .location-container .phone-card {
+      padding: 18px;
+      align-self: stretch;
+      text-align: center;
+      margin-right: unset; } }
 
 #body {
   position: relative;
@@ -280,56 +287,63 @@
     content: '<';
     left: 0; }
 
-.font-header-1 {
-  font-size: 3em;
-  font-weight: bolder;
-  margin-top: 8px;
-  margin-bottom: 16px; }
-
-.font-header-2, .section, .section-image {
-  font-size: 2em;
-  font-weight: bolder;
-  margin-top: 8px;
-  margin-bottom: 8px; }
-
-.font-header-3 {
-  font-size: 1em;
-  font-weight: bold;
-  margin-top: 0;
-  margin-bottom: 0; }
-
-.font-caption {
-  font-size: 0.85em; }
-
-.font-body-copy, .card {
-  font-size: 1em; }
-
 #location-meta-card {
+  position: relative;
+  right: 0;
+  top: 0;
   display: inline-flex;
   background: url("./location.png") no-repeat;
   background-size: cover;
+  min-height: calc(100vh - 300px);
   flex-direction: row;
   flex-wrap: nowrap;
   flex-grow: 1; }
   @media (max-width: 768px) {
     #location-meta-card {
       min-height: calc(100vh - 120px); } }
-  #location-meta-card .location-container {
+  #location-meta-card .location-container, #location-meta-card .map-container {
     flex: 1;
     display: inline-flex;
     flex-direction: column; }
-  #location-meta-card .location-address {
-    border-radius: 4px 0 0 4px;
-    background-color: #e57373;
-    display: inline-flex;
-    flex-direction: column;
-    height: 20%; }
-  #location-meta-card .location-phone-card {
-    padding: 18px;
-    float: right;
-    border-radius: 8px;
-    margin-right: 25%;
-    background-color: #e57373; }
+  #location-meta-card .map-container {
+    padding: 8px;
+    margin-left: 15%; }
+  #location-meta-card .location-container {
+    padding: 8px 0 0 8px; }
+    #location-meta-card .location-container .address {
+      display: inline-flex;
+      flex-direction: column;
+      border-radius: 4px 0 0 4px;
+      background-color: #e57373;
+      padding: 18px 25% 18px 18px; }
+      #location-meta-card .location-container .address text.font-header-3 {
+        padding-top: 8px; }
+      #location-meta-card .location-container .address .hours {
+        display: inline-flex;
+        flex-direction: row;
+        justify-content: space-between; }
+    #location-meta-card .location-container .phone-card {
+      padding: 18px;
+      align-self: flex-end;
+      border-radius: 8px;
+      margin-right: 25%;
+      background-color: #e57373; }
+
+@media (max-width: 768px) {
+  #location-meta-card {
+    flex-direction: column-reverse;
+    min-height: unset;
+    padding: 8px 5%; }
+    #location-meta-card .location-container, #location-meta-card .map-container {
+      padding: unset;
+      margin: unset; }
+    #location-meta-card .location-container .address {
+      padding: 18px; }
+    #location-meta-card .location-container .phone-card {
+      padding: 18px;
+      align-self: stretch;
+      text-align: center;
+      margin-right: unset; } }
 
 .font-header-1 {
   font-size: 3em;

@@ -1,28 +1,63 @@
 @import './variables/colors.sass'
 @import './variables/sizes.sass'
-@import './mixins.sass'
 #location-meta-card
+  position: relative
+  right: 0
+  top: 0
   display: inline-flex
   background: url("./location.png") no-repeat
   background-size: cover
+  min-height: calc(100vh - #{$header-size})
   flex-direction: row
   flex-wrap: nowrap
   flex-grow: 1
   @include breakpoint($tablet)
     min-height: calc(100vh - #{$header-size-mobile})
-  .location-container
+  .location-container, .map-container
     flex: 1
     display: inline-flex
     flex-direction: column
-  .location-address
-    border-radius: 4px 0 0 4px
-    background-color: $primary
-    display: inline-flex
-    flex-direction: column
-    height: 20%
-  .location-phone-card
-    padding: 18px
-    float: right
-    border-radius: 8px
-    margin-right: 25%
-    background-color: $primary
+  .map-container
+    padding: 8px
+    margin-left: 15%
+  .location-container
+    padding: 8px 0 0 8px
+    .address
+      display: inline-flex
+      flex-direction: column
+      border-radius: 4px 0 0 4px
+      background-color: $primary
+      padding: 18px 25% 18px 18px
+      text.font-header-3
+        padding-top: 8px
+      .hours
+        display: inline-flex
+        flex-direction: row
+        justify-content: space-between
+    .phone-card
+      padding: 18px
+      align-self: flex-end
+      border-radius: 8px
+      margin-right: 25%
+      background-color: $primary
+
+@include breakpoint($phone)
+  #location-meta-card
+    flex-direction: column-reverse
+    min-height: unset
+    padding: 8px 5%
+    @include breakpoint($tablet)
+    .location-container, .map-container
+      padding: unset
+      margin: unset
+    .map-container
+    .location-container
+      .address
+        padding: 18px
+        text.font-header-3
+        .hours
+      .phone-card
+        padding: 18px
+        align-self: stretch
+        text-align: center
+        margin-right: unset
