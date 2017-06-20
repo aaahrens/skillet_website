@@ -5,12 +5,8 @@
   "dependencies": {
     "axios": "^0.16.2",
     "csvtojson": "^1.1.6",
-    "google-auth-library": "latest",
-    "googleapis": "^19.0.0",
-    "gsheet-web": "^3.0.1",
     "history": "^4.6.1",
     "immutable": "^3.8.1",
-    "query-string": "^4.3.4",
     "rc-tooltip": "^3.4.6",
     "react": "^15.5.4",
     "react-contextmenu": "^2.6.1",
@@ -28,7 +24,8 @@
     "redux": "^3.6.0",
     "redux-actions": "^2.0.3",
     "redux-thunk": "^2.2.0",
-    "url-parse": "^1.1.9"
+    "url-parse": "^1.1.9",
+    "gsheets": "latest"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",

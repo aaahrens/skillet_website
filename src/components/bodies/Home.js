@@ -35,27 +35,27 @@ const Home = (props) => {
 					<img src={img1}/>
 				</div>
 			</Slider>
-			<div className="section">
-				Featured Menu Items
-			</div>
-			<div className="featured-item-container">
-				{
-					props.featuredItems.map((item) => {
-						return (
-							<div className="featured-item">
-								<div className="image">
-									<img src={img1} />
-								</div>
-								<div className="meta">
-									<p className="font-header-1">{item.title}</p>
-									<p className="font-caption">{item.price}</p>
-									<p className="font-body-copy">{item.description}</p>
-								</div>
-							</div>
-						)
-					})
-				}
-			</div>
+			{/*<div className="section">*/}
+				{/*Featured Menu Items*/}
+			{/*</div>*/}
+			{/*<div className="featured-item-container">*/}
+				{/*{*/}
+					{/*props.featuredItems.map((item) => {*/}
+						{/*return (*/}
+							{/*<div className="featured-item">*/}
+								{/*<div className="image">*/}
+									{/*<img src={img1} />*/}
+								{/*</div>*/}
+								{/*<div className="meta">*/}
+									{/*<p className="font-header-1">{item.title}</p>*/}
+									{/*<p className="font-caption">{item.price}</p>*/}
+									{/*<p className="font-body-copy">{item.description}</p>*/}
+								{/*</div>*/}
+							{/*</div>*/}
+						{/*)*/}
+					{/*})*/}
+				{/*}*/}
+			{/*</div>*/}
 		</div>
 	)
 };

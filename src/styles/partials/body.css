@@ -22,6 +22,30 @@
 .font-body-copy {
   font-size: 1em; }
 
+.font-header-1 {
+  font-size: 3em;
+  font-weight: bolder;
+  margin-top: 8px;
+  margin-bottom: 16px; }
+
+.font-header-2 {
+  font-size: 2em;
+  font-weight: bolder;
+  margin-top: 8px;
+  margin-bottom: 8px; }
+
+.font-header-3 {
+  font-size: 1em;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 0; }
+
+.font-caption {
+  font-size: 0.85em; }
+
+.font-body-copy {
+  font-size: 1em; }
+
 #location-meta-card {
   position: relative;
   right: 0;
@@ -88,7 +112,7 @@
   flex-direction: column;
   overflow-y: scroll;
   min-height: calc(100vh - 300px - 120px - 50px);
-  background: #d1b599;
+  background: white;
   z-index: -1;
   justify-content: center; }
   @media (max-width: 768px) {

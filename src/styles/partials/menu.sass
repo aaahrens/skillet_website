@@ -1,6 +1,5 @@
 @import "./mixins.sass"
 .menu-section
-  width: 100%
   display: inline-flex
   background: white
   margin: 10px
@@ -27,7 +26,7 @@
   flex-direction: row
   flex-wrap: wrap
   padding: 10px 30px 30px
-  align-items: flex-end
+  align-items: flex-start
   width: 100%
   justify-content: flex-start
   .menu-item
@@ -38,7 +37,8 @@
     flex-direction: column
     padding-right: 50px
     padding-left: 50px
-    margin-top: 50px
+    align-content: center
+    margin-top: 10px
     @include breakpoint($tablet)
       width: 100%
       max-width: 100%
