@@ -1,5 +1,5 @@
 import ReactDOM from "react-dom";
-import Routes from "./Routes";
+import Routes from "./routes";
 import {Provider} from "react-redux";
 import store, {history} from "./store/store";
 import {ConnectedRouter} from "react-router-redux";

@@ -1,0 +1,69 @@
+@import "mixins"
+.menu-section
+  display: inline-flex
+  margin: 10px
+  flex-wrap: wrap
+  flex-direction: column
+  align-items: center
+  padding: 10px 30px 30px
+  @include breakpoint($tablet)
+    margin: 5px 0 0
+
+.menu-title
+  display: flex
+  width: 100%
+  flex-direction: column
+  justify-content: flex-start
+  align-items: flex-start
+  margin-top: 20px
+  color: black
+  font-size: 150%
+  border-bottom: 1px solid black
+  @include breakpoint($tablet)
+    width: 100%
+  .title
+    font-size: 200%
+
+.menu-items-container
+  display: inline-flex
+  flex-direction: row
+  flex-wrap: wrap
+  margin-top: 20px
+  align-items: flex-start
+  width: 100%
+  justify-content: space-between
+  font-family: Baskerville, sans-serif
+  .menu-item
+    width: 33%
+    max-width: 33%
+    flex-grow: 1
+    display: inline-flex
+    flex-direction: column
+    padding-right: 50px
+    align-content: center
+    margin-top: 15px
+    color: black
+    @include breakpoint($tablet)
+      width: 100%
+      max-width: 100%
+      padding: 0
+
+    .title
+      display: flex
+      flex-direction: row
+      border-bottom: 1px solid black
+      font-family: Baskerville, sans-serif
+      font-size: 175%
+      .name
+        margin-right: auto
+
+    .content
+      margin-top: 10px
+      display: inline-flex
+      align-items: flex-start
+      justify-content: flex-start
+      font-size: 125%
+
+
+
+

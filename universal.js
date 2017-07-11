@@ -1,6 +1,6 @@
 import store from './src/store/serverStore'
 import * as actions from './src/actions/data.actions'
-import Routes from './src/Routes'
+import Routes from './src/routes'
 import React from 'react'
 import path from 'path'
 import {StaticRouter} from 'react-router-dom'
@@ -14,6 +14,7 @@ const fs = require('fs');
 
 
 const universalLoader = (req, res) => {
+	console.log("loading")
 	const filePath = path.resolve(__dirname, '.', 'build', 'index.html')
 
 	fs.readFile(filePath, 'utf8', (err, htmlData) => {
@@ -21,7 +22,7 @@ const universalLoader = (req, res) => {
 			console.error('read err', err)
 			return res.status(404).end()
 		}
-		const context = {
+		let context = {
 
 		};
 
@@ -38,8 +39,10 @@ const universalLoader = (req, res) => {
 		if (context.url) {
 			// Somewhere a `<Redirect>` was rendered
 			// redirect(301, context.url)
+			console.log("sup")
 		} else {
 			// we're good, send the response
+			console.log("rendering")
 			const RenderedApp = htmlData.replace('{{SSR}}', markup)
 			res.send(RenderedApp)
 		}

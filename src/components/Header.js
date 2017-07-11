@@ -4,35 +4,31 @@
 import React from "react";
 import {connect} from "react-redux";
 import {push} from "react-router-redux";
-import image from "../logo-1.png";
 import * as data from "../actions/data.actions";
 const Header = (props) => {
 
 
 	return (
-		<div className="header">
-			<a onClick={() => props.goHome()} id="logo-container">
-				<img src={image} className="logo">
+		<div className="header-background">
+			<div className="header">
+				<a className="header-logo" onClick={() => props.goHome()}>
 
-				</img>
-			</a>
-			<div id="button-container">
-				<a className="menu-button" onClick={() => props.goLocation()} data={"location" === props.currentTab}>
-					Location
 				</a>
-				<a className="menu-button" onClick={() => props.goMenu()} data={"menu" === props.currentTab}>
+				<a className="header-item" onClick={() => props.goMenu()}>
 					Menu
 				</a>
-				<div className="menu-button" placeholder="true">
-				</div>
-				<a className="menu-button" onClick={() => props.goAbout()} data={"about" === props.currentTab}>
-					About
+				<a className="header-item" onClick={() => props.goLocation()}>
+					Location
 				</a>
-				<a className="menu-button" onClick={() => props.goGallery()} data={"gallery" === props.currentTab}>
+				<a className="header-item" onClick={() => {}}>
 					Gallery
+				</a>
+				<a className="header-item" onClick={() => props.goContact()}>
+					Contact
 				</a>
 			</div>
 		</div>
+
 	)
 };
 
@@ -46,7 +42,7 @@ export default connect(
 		goMenu: () => dispatch(push("/menu")),
 		goLocation: () => dispatch(push("/location")),
 		goHome: () => dispatch(push("/")),
-		goGallery: () => dispatch(push("/gallery")),
+		goContact: () => dispatch(push("/contact")),
 		getMenu: () => dispatch(data.getMenu())
 	})
 )(Header)

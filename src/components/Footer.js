@@ -18,7 +18,7 @@ const Footer = (props) => {
 				dicknuggets@mgee.com
 			</div>
 			<div id="footer-line">
-				copyright this logo and shit <br />
+				 copyright this logo and shit <br />
 				skillets has no other locations
 			</div>
 		</div>

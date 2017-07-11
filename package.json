@@ -38,7 +38,8 @@
     "morgan": "^1.8.2",
     "node-sass-chokidar": "0.0.2",
     "npm-run-all": "^4.0.2",
-    "react-scripts": "1.0.7"
+    "react-scripts": "1.0.7",
+    "isomorphic-fetch": "latest"
   },
   "scripts": {
     "build-css": "node-sass-chokidar src/ -o src/",
