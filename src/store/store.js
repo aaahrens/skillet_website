@@ -16,8 +16,19 @@ const middleware = applyMiddleware(
 	thunk
 );
 
-const store = createStore(allReducers, middleware);
+/** @namespace window.__PRELOADED_STATE__ */
+const preloadedState = window.__PRELOADED_STATE__;
+delete window.__PRELOADED_STATE__;
 
+let store;
 
-export default store;
+if(preloadedState === '{{STORE}}'){
+	console.log("store was note rendered")
+	store = createStore(allReducers, middleware);
+}else{
+	console.log("shit was rendered")
+	let store = createStore(allReducers, preloadedState,  middleware);
+}
+
+export default store
 

@@ -5,7 +5,7 @@ import React from "react";
 import "./styles/screen.css";
 import {Route} from "react-router";
 import Header from "./components/Header";
-import ContactBody from "./components/bodies/Contact";
+import AboutBody from "./components/bodies/About";
 import {connect} from "react-redux";
 import * as data from "./actions/data.actions";
 import {Switch, withRouter} from "react-router-dom";
@@ -14,13 +14,13 @@ import Home from "./components/bodies/Home";
 import MenuBody from "./components/bodies/Menu";
 import LocationBody from "./components/bodies/Location";
 import Footer from "./components/Footer";
+import GalleryBody from "./components/bodies/Gallery";
 
 class Routes extends React.Component {
 
 	constructor(props) {
 		super(props);
-		this.props.getMenu();
-		this.props.getGallery();
+		this.props.onStart();
 		this.props.select(props.location.pathname.replace("/", ''))
 	}
 
@@ -31,17 +31,19 @@ class Routes extends React.Component {
 	render() {
 		return (
 			<div className="screen">
-				<div className="mask"/>
-
 				<Route path="/" component={Header}/>
-				<div id="body">
+				<div className="content-wrapper">
 					<Switch>
-						<Route path="/contact" component={ContactBody}/>
-						<Route path="/location" component={LocationBody}/>
+
 						<Route path="/menu" component={MenuBody}/>
+						<Route path="/about" component={AboutBody}/>
+						<Route path="/location" component={LocationBody}/>
+						<Route path="/gallery" component={GalleryBody}/>
 						<Route path="/" component={Home}/>
+
 					</Switch>
 					<Footer/>
+
 				</div>
 			</div>
 		)
@@ -52,8 +54,7 @@ class Routes extends React.Component {
 export default withRouter(connect(
 	(state) => ({}),
 	(dispatch) => ({
-		getMenu: () => dispatch(data.getMenu()),
-		getGallery: () => dispatch(data.getGallery()),
+		onStart: () => dispatch(data.fetchAll()),
 		select: (name) => dispatch(state.selectTab(name))
 
 	})

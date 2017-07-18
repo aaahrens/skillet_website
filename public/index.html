@@ -20,12 +20,15 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>Skillets Cafe, Dank Ass Coffee</title>
+    <title>Skillets Cafe</title>
 </head>
 <body>
 <noscript>
     You need to enable JavaScript to run this app.
 </noscript>
+<script>
+	window.__PRELOADED_STATE__ = '{{STORE}}'
+</script>
 <div id="root">{{SSR}}</div>
 <!--
   This HTML file is a template.

@@ -2,33 +2,26 @@
 @import 'variables/sizes'
 @import 'mixins'
 
+
 .location-container
-  width: 100%
-  height: 100%
   display: flex
+  flex-direction: row
   flex-wrap: wrap
-  position: relative
   .map
-    width: 65%
-    height: 600px
-    padding: 1%
+    max-width: 70%
+    height: 80vh
+    flex: 1
     iframe
       width: 100%
       height: 100%
+      z-index: -1
     @include breakpoint($tablet)
-      width: 100%
+      min-width: 100%
       height: 400px
-  .address
-    width: 25%
-    height: 100%
-    color: black
-    font-size: 50px
-    font-family: Baskerville, sans-serif
-    display: flex
-    justify-content: flex-start
-    padding: 3%
+  .one
+    font-size: 150%
+    padding: 10px
+    flex: 1
+    max-width: 30%
     @include breakpoint($tablet)
-      width: 100%
-      font-size: 100%
-
-
+      min-width: 100%

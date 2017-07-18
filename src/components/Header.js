@@ -7,25 +7,27 @@ import {push} from "react-router-redux";
 import * as data from "../actions/data.actions";
 const Header = (props) => {
 
-
 	return (
-		<div className="header-background">
+		<div className="header-wrapper">
 			<div className="header">
 				<a className="header-logo" onClick={() => props.goHome()}>
 
 				</a>
-				<a className="header-item" onClick={() => props.goMenu()}>
-					Menu
-				</a>
-				<a className="header-item" onClick={() => props.goLocation()}>
-					Location
-				</a>
-				<a className="header-item" onClick={() => {}}>
-					Gallery
-				</a>
-				<a className="header-item" onClick={() => props.goContact()}>
-					Contact
-				</a>
+				<div className="header-inner">
+
+					<a className="header-item" href="/menu"onClick={(e) => {e.preventDefault(); props.goMenu()}}>
+						Menu
+					</a>
+					<a className="header-item" href="/location" onClick={(e) => {e.preventDefault(); props.goLocation()}}>
+						Location
+					</a>
+					<a className="header-item" href="/gallery" onClick={(e) => {e.preventDefault(); props.goGallery()}}>
+						Gallery
+					</a>
+					<a className="header-item" href="/about" onClick={(e) => {e.preventDefault(); props.goAbout()}}>
+						About
+					</a>
+				</div>
 			</div>
 		</div>
 
@@ -38,12 +40,11 @@ export default connect(
 		currentTab: state.state.currentTab
 	}),
 	(dispatch) => ({
-		goAbout: () => dispatch(push("/about")),
 		goMenu: () => dispatch(push("/menu")),
 		goLocation: () => dispatch(push("/location")),
 		goHome: () => dispatch(push("/")),
-		goContact: () => dispatch(push("/contact")),
-		getMenu: () => dispatch(data.getMenu())
+		goAbout: () => dispatch(push("/about")),
+		goGallery: () => dispatch(push("/gallery")),
 	})
 )(Header)
 

@@ -14,7 +14,8 @@ const fs = require('fs');
 
 
 const universalLoader = (req, res) => {
-	console.log("loading")
+
+
 	const filePath = path.resolve(__dirname, '.', 'build', 'index.html')
 
 	fs.readFile(filePath, 'utf8', (err, htmlData) => {
@@ -25,6 +26,10 @@ const universalLoader = (req, res) => {
 		let context = {
 
 		};
+
+		store.dispatch(actions.fetchAll());
+
+
 
 		const markup = ReactDOMServer.renderToString(
 			<Provider store={store}>
@@ -37,13 +42,16 @@ const universalLoader = (req, res) => {
 		);
 
 		if (context.url) {
-			// Somewhere a `<Redirect>` was rendered
-			// redirect(301, context.url)
-			console.log("sup")
+			redirect(301, context.url)
+
 		} else {
 			// we're good, send the response
-			console.log("rendering")
-			const RenderedApp = htmlData.replace('{{SSR}}', markup)
+			const preloadedState = store.getState();
+
+			const RenderedApp = htmlData
+				.replace('{{SSR}}', markup)
+				.replace('{{STORE}}', JSON.stringify(preloadedState).replace(/</g, '\\u003c'));
+
 			res.send(RenderedApp)
 		}
 	})

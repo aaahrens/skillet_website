@@ -1,26 +1,25 @@
 @import 'partials/header'
-@import 'partials/body'
 @import 'partials/location'
 @import 'partials/menu'
 @import 'partials/home'
 @import 'partials/footer'
 @import 'partials/contact'
+@import 'partials/structure'
+@import 'partials/about'
+@import 'partials/gallery'
 *
   -webkit-box-sizing: border-box
   -moz-box-sizing: border-box
 
+
 body
   background: $beige-main
-
-.screen
-  width: 100%
-  height: 100vh
-  position: absolute
-  top: 0
-  left: 0
-  margin: 0 auto
-  padding: 0 auto
-  z-index: -2
+  margin: 0
+  padding: 0
+  display: flex
+  flex-direction: column
+  height: 100%
+  overflow-x: hidden
 
 @font-face
   src: url("./icons/castro.ttf")
@@ -28,3 +27,10 @@ body
 
 ::-webkit-scrollbar
   display: none
+
+a
+  text-decoration: none
+.content-wrapper
+  overflow-x: hidden
+  display: flex
+  flex-direction: column

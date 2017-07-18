@@ -14,12 +14,12 @@ const Footer = (props) => {
 				Windsor, CA 95492
 			</div>
 			<div id="footer-line">
-				(888)-888-9999 <br/>
-				dicknuggets@mgee.com
+				707-657-7599<br/>
+				test@yahoo.com
 			</div>
 			<div id="footer-line">
-				 copyright this logo and shit <br />
-				skillets has no other locations
+				Skillets Cafe<br />
+				2017, all rights reserved.
 			</div>
 		</div>
 	)
@@ -27,7 +27,11 @@ const Footer = (props) => {
 
 
 export default withRouter(connect(
-	(state) => ({}),
-	(dispatch) => ({})
+	(state) => ({
+
+	}),
+	(dispatch) => ({
+
+	})
 )(Footer))
 

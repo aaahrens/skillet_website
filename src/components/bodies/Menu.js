@@ -9,11 +9,7 @@ const MenuBody = (props) => {
 
 
 	return (
-		<div className="menu-body">
-			{/*{*/}
-			{/*props.menu.size === 0 ? <div>show loading</div> : null*/}
-			{/*}*/}
-
+		<div>
 			{
 				props.menu.map((item, index) => {
 					return (
