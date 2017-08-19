@@ -20,8 +20,22 @@ class Routes extends React.Component {
 
 	constructor(props) {
 		super(props);
-		this.props.onStart();
 		this.props.select(props.location.pathname.replace("/", ''))
+	}
+
+	componentWillMount(){
+		if(this.props.menu.size === 0) {
+			this.props.onStart()
+		}
+
+		// if(this.props.specials.size === 0) {
+		//
+		// }
+		// if(this.props.images.size === 0) {
+		//
+		// }
+
+
 	}
 
 	componentWillReceiveProps(nextProps) {
@@ -52,7 +66,11 @@ class Routes extends React.Component {
 
 
 export default withRouter(connect(
-	(state) => ({}),
+	(state) => ({
+		menu: state.data.menu,
+		specials: state.data.specials,
+		images: state.data.images,
+	}),
 	(dispatch) => ({
 		onStart: () => dispatch(data.fetchAll()),
 		select: (name) => dispatch(state.selectTab(name))

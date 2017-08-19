@@ -4,7 +4,7 @@
 import React from "react";
 import {connect} from "react-redux";
 import {push} from "react-router-redux";
-import * as data from "../actions/data.actions";
+
 const Header = (props) => {
 
 	return (
@@ -15,16 +15,28 @@ const Header = (props) => {
 				</a>
 				<div className="header-inner">
 
-					<a className="header-item" href="/menu"onClick={(e) => {e.preventDefault(); props.goMenu()}}>
+					<a className="header-item" href="/menu" onClick={(e) => {
+						e.preventDefault();
+						props.goMenu()
+					}}>
 						Menu
 					</a>
-					<a className="header-item" href="/location" onClick={(e) => {e.preventDefault(); props.goLocation()}}>
+					<a className="header-item" href="/location" onClick={(e) => {
+						e.preventDefault();
+						props.goLocation()
+					}}>
 						Location
 					</a>
-					<a className="header-item" href="/gallery" onClick={(e) => {e.preventDefault(); props.goGallery()}}>
+					<a className="header-item" href="/gallery" onClick={(e) => {
+						e.preventDefault();
+						props.goGallery()
+					}}>
 						Gallery
 					</a>
-					<a className="header-item" href="/about" onClick={(e) => {e.preventDefault(); props.goAbout()}}>
+					<a className="header-item" href="/about" onClick={(e) => {
+						e.preventDefault();
+						props.goAbout()
+					}}>
 						About
 					</a>
 				</div>

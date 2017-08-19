@@ -1,9 +1,8 @@
 import express from 'express'
 import universalLoader from './universal'
 import bodyParser from 'body-parser'
-import compression from'compression'
+import compression from 'compression'
 import path from 'path'
-import morgan from 'morgan'
 // routes
 const router = express.Router();
 router.get('/', universalLoader);

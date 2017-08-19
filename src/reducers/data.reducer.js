@@ -2,10 +2,7 @@
  * Created by drunkengranite on 1/14/2017.
  */
 import {handleActions} from "redux-actions";
-import {
-	LOAD_MENU, SAVE_SPECIALS, SAVE_ABOUT, SAVE_GALLERY
-
-} from "../constants/constants";
+import {LOAD_MENU, SAVE_ABOUT, SAVE_GALLERY, SAVE_SPECIALS} from "../constants/constants";
 
 import Immutable from "immutable";
 

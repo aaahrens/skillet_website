@@ -5,12 +5,9 @@ import React from 'react'
 import path from 'path'
 import {StaticRouter} from 'react-router-dom'
 import ReactDOMServer from 'react-dom/server'
-import axios from 'axios'
 import {Provider} from 'react-redux'
+
 const fs = require('fs');
-
-
-
 
 
 const universalLoader = (req, res) => {
@@ -23,12 +20,9 @@ const universalLoader = (req, res) => {
 			console.error('read err', err)
 			return res.status(404).end()
 		}
-		let context = {
-
-		};
+		let context = {};
 
 		store.dispatch(actions.fetchAll());
-
 
 
 		const markup = ReactDOMServer.renderToString(
@@ -36,7 +30,7 @@ const universalLoader = (req, res) => {
 				<StaticRouter
 					location={req.url}
 					context={context}>
-					<Routes />
+					<Routes/>
 				</StaticRouter>
 			</Provider>
 		);
@@ -46,11 +40,12 @@ const universalLoader = (req, res) => {
 
 		} else {
 			// we're good, send the response
+
 			const preloadedState = store.getState();
 
 			const RenderedApp = htmlData
 				.replace('{{SSR}}', markup)
-				.replace('{{STORE}}', JSON.stringify(preloadedState).replace(/</g, '\\u003c'));
+				.replace('"{{STORE}}"', JSON.stringify(preloadedState).replace(/</g, '\\u003c'));
 
 			res.send(RenderedApp)
 		}

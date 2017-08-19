@@ -10,7 +10,7 @@ const Footer = (props) => {
 	return (
 		<div id="footer">
 			<div id="footer-line">
-				8776 Lakewood Dr <br />
+				8776 Lakewood Dr <br/>
 				Windsor, CA 95492
 			</div>
 			<div id="footer-line">
@@ -18,7 +18,7 @@ const Footer = (props) => {
 				test@yahoo.com
 			</div>
 			<div id="footer-line">
-				Skillets Cafe<br />
+				Skillets Cafe<br/>
 				2017, all rights reserved.
 			</div>
 		</div>
@@ -27,11 +27,7 @@ const Footer = (props) => {
 
 
 export default withRouter(connect(
-	(state) => ({
-
-	}),
-	(dispatch) => ({
-
-	})
+	(state) => ({}),
+	(dispatch) => ({})
 )(Footer))
 

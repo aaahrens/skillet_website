@@ -7,7 +7,7 @@ import {applyMiddleware, createStore} from "redux";
 import thunk from "redux-thunk";
 import {routerMiddleware} from "react-router-redux";
 import createHistory from "history/createBrowserHistory";
-
+import Immutable from 'immutable'
 
 export const history = createHistory();
 
@@ -16,19 +16,28 @@ const middleware = applyMiddleware(
 	thunk
 );
 
-/** @namespace window.__PRELOADED_STATE__ */
+
 const preloadedState = window.__PRELOADED_STATE__;
 delete window.__PRELOADED_STATE__;
 
-let store;
+let local;
 
-if(preloadedState === '{{STORE}}'){
-	console.log("store was note rendered")
-	store = createStore(allReducers, middleware);
-}else{
-	console.log("shit was rendered")
-	let store = createStore(allReducers, preloadedState,  middleware);
+if (preloadedState === '{{STORE}}') {
+	console.log("store was not found in the html")
+	local = createStore(allReducers, middleware);
+} else {
+	console.log("store was found in the html")
+	Object.keys(preloadedState).map((key) => {
+		if (key !== "router") {
+			Object.keys(preloadedState[key]).map((second) => {
+				preloadedState[key][second] = Immutable.fromJS(preloadedState[key][second])
+			})
+		}
+	});
+
+	console.dir(preloadedState);
+
+	local = createStore(allReducers, preloadedState, middleware);
 }
 
-export default store
-
+export const store = local;
