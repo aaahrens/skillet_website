@@ -2,17 +2,12 @@
  * Created by drunkengranite on 6/3/17.
  */
 
-import allReducers from "../reducers/all.reducers";
-import {applyMiddleware, createStore} from "redux";
-import thunk from "redux-thunk";
+import { applyMiddleware, createStore } from 'redux';
+import thunk from 'redux-thunk';
+import index from '../reducers/index';
 
+const middleware = applyMiddleware(thunk);
 
-const middleware = applyMiddleware(
-	thunk
-);
-
-const store = createStore(allReducers, middleware);
-
+const store = createStore(index, middleware);
 
 export default store;
-

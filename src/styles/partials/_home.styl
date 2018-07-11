@@ -1,0 +1,67 @@
+@import 'variables/sizes'
+@import 'mixins'
+//
+.image
+  height: 100%
+  width: 100%
+  position: absolute
+  top: 0
+  z-index: -3
+  background: url("./images/background.jpg")
+  background-size: cover
+  //background-origin: content-box
+  @include breakpoint($tablet)
+
+.mask
+  height: 100%
+  width: 100%
+  background: rgba($beige-main, .7)
+  position: absolute
+  top: 0
+  z-index: -2
+
+.special-wrapper
+  z-index: -1
+  color: black
+  width: 100%
+  min-height: 100%
+  flex-direction: column !important
+  position: relative
+  background:  url("./images/background.jpg")
+  background-size: cover
+  box-shadow: inset 0 0 0 1000px rgba($beige-main, .7)
+
+  .special-title
+    font-family: penis, sans-serif
+    font-size: 100px
+    height: auto
+    margin: 50px auto 50px 100px
+    float: left
+    @include breakpoint($tablet)
+      margin: 5px
+
+  .special-items
+    width: 80%
+    max-width: 80%
+    margin-left: auto
+    margin-right: auto
+    display: flex
+    flex-direction: column
+    font-size: 5vh
+    font-family: Baskerville, sans-serif
+    padding-bottom: 20px
+
+
+    .special-name-price-content
+      display: flex
+      border-bottom: 1px solid black
+      margin-top: 20px
+      height: auto
+      .price
+        margin-left: auto
+    .content
+      font-size: 50%
+
+      &:last-child
+        margin-bottom: 15px
+      

@@ -1,0 +1,41 @@
+@import 'mixins'
+@import 'variables/colors'
+@import 'variables/sizes'
+@import 'mixins'
+.header-wrapper
+  +shadow()
+  .header
+    display: flex
+    flex-direction: row
+    background: $salmon-main
+    z-index: 500
+    min-height: $header-size
+    height: auto
+    width: 100%
+    flex-wrap: wrap
+    justify-content: center
+    align-items: center
+
+    .header-logo
+      background: url("./images/logo.svg") no-repeat center
+      background-size: contain
+      width: 400px
+      height: 110px
+      float:  left
+      margin: 10px
+    .header-inner
+      float: right
+      font-family: Baskerville, sans-serif
+      font-size: 3vh
+      display: flex
+      justify-content: space-around
+      width: 100%
+      max-width: 400px
+      .header-item
+        color: white
+        text-align: center
+        &:hover
+          border-bottom: 1px solid white
+
+
+
