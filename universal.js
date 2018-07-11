@@ -1,5 +1,5 @@
 import store from './src/store/serverStore'
-import * as actions from './src/actions/data.actions'
+import * as actions from './src/actions/DataActions'
 import Routes from './src/routes'
 import React from 'react'
 import path from 'path'

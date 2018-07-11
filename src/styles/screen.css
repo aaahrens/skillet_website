@@ -279,6 +279,9 @@ body {
   src: url("./icons/castro.ttf");
   font-family: penis; }
 
+::-webkit-scrollbar {
+  display: none; }
+
 a {
   text-decoration: none; }
 

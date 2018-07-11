@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/aggre_isomorphic.iml" filepath="$PROJECT_DIR$/.idea/aggre_isomorphic.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/skillet_website.iml" filepath="$PROJECT_DIR$/.idea/skillet_website.iml" />
     </modules>
   </component>
 </project>
