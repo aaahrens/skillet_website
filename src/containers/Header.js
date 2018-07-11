@@ -1,9 +1,9 @@
 /**
  * Created by drunkengranite on 6/6/17.
  */
-import React from 'react';
-import { connect } from 'react-redux';
-import { push } from 'react-router-redux';
+import React from "react";
+import { connect } from "react-redux";
+import { push } from "react-router-redux";
 
 const Header = (props) => (
     <div className="header-wrapper">
@@ -60,10 +60,10 @@ export default connect(
         currentTab: state.state.currentTab
     }),
     (dispatch) => ({
-        goMenu: () => dispatch(push('/menu')),
-        goLocation: () => dispatch(push('/location')),
-        goHome: () => dispatch(push('/')),
-        goAbout: () => dispatch(push('/about')),
-        goGallery: () => dispatch(push('/gallery'))
+        goMenu: () => dispatch(push("/menu")),
+        goLocation: () => dispatch(push("/location")),
+        goHome: () => dispatch(push("/")),
+        goAbout: () => dispatch(push("/about")),
+        goGallery: () => dispatch(push("/gallery"))
     })
 )(Header);

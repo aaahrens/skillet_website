@@ -1,11 +1,11 @@
-import Immutable from 'immutable';
-import { getWorksheet } from 'gsheets';
+import Immutable from "immutable";
+import { getWorksheet } from "gsheets";
 import {
     LOAD_MENU,
     SAVE_ABOUT,
     SAVE_GALLERY,
     SAVE_SPECIALS
-} from '../constants';
+} from "../constants";
 
 export const saveSpecials = (specials) => ({
     type: SAVE_SPECIALS,
@@ -29,7 +29,7 @@ export const saveGallery = (data) => ({
 
 export const getGallery = () => (dispatch) => {
     Promise.resolve(
-        getWorksheet('1tOAxF5rsRz8bI0rkcTKDa3wQRdOZIEnjgCoZc8J8iz8', 'Gallery')
+        getWorksheet("1tOAxF5rsRz8bI0rkcTKDa3wQRdOZIEnjgCoZc8J8iz8", "Gallery")
     )
         .then((response) => {
             dispatch(saveGallery(Immutable.fromJS(response.data)));
@@ -41,21 +41,21 @@ export const getGallery = () => (dispatch) => {
 
 export const getMenu = () => (dispatch) => {
     Promise.all([
-        getWorksheet('1tOAxF5rsRz8bI0rkcTKDa3wQRdOZIEnjgCoZc8J8iz8', 'Items'),
-        getWorksheet('1tOAxF5rsRz8bI0rkcTKDa3wQRdOZIEnjgCoZc8J8iz8', 'Sections')
+        getWorksheet("1tOAxF5rsRz8bI0rkcTKDa3wQRdOZIEnjgCoZc8J8iz8", "Items"),
+        getWorksheet("1tOAxF5rsRz8bI0rkcTKDa3wQRdOZIEnjgCoZc8J8iz8", "Sections")
     ])
         .then((values) => {
             const MenuItems = Immutable.fromJS(values[0].data);
             const Menu = Immutable.fromJS(values[1].data).map((menu) =>
                 menu.set(
-                    'Items',
+                    "Items",
                     MenuItems.filter((item) => {
-                        if (!menu.get('Name') || !item.get('Section')) {
+                        if (!menu.get("Name") || !item.get("Section")) {
                             return false;
                         }
                         return (
-                            menu.get('Name').trim() ===
-                            item.get('Section').trim()
+                            menu.get("Name").trim() ===
+                            item.get("Section").trim()
                         );
                     })
                 )
@@ -68,7 +68,7 @@ export const getMenu = () => (dispatch) => {
 
 export const getSpecials = () => (dispatch) => {
     Promise.resolve(
-        getWorksheet('1tOAxF5rsRz8bI0rkcTKDa3wQRdOZIEnjgCoZc8J8iz8', 'Specials')
+        getWorksheet("1tOAxF5rsRz8bI0rkcTKDa3wQRdOZIEnjgCoZc8J8iz8", "Specials")
     )
         .then((response) => {
             dispatch(saveSpecials(Immutable.fromJS(response.data)));

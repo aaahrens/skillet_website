@@ -1,7 +1,7 @@
 /**
  * Created by drunkengranite on 6/6/17.
  */
-import React from 'react';
+import React from "react";
 
 const Footer = () => (
     <div id="footer">

@@ -1,8 +1,8 @@
 /**
  * Created by drunkengranite on 7/9/17.
  */
-import React from 'react';
-import { connect } from 'react-redux';
+import React from "react";
+import { connect } from "react-redux";
 
 /**
  *  probably should just rewrite this

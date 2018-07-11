@@ -4,8 +4,8 @@
 /**
  * Created by drunkengranite on 6/6/17.
  */
-import React from 'react';
-import { connect } from 'react-redux';
+import React from "react";
+import { connect } from "react-redux";
 
 const Home = (props) => {
     const { specialItems } = props;
@@ -17,11 +17,11 @@ const Home = (props) => {
                     {specialItems.map((item, index) => (
                         <div key={index}>
                             <div className="special-name-price-content">
-                                <div className="name">{item.get('name')}</div>
-                                <div className="price">{item.get('price')}</div>
+                                <div className="name">{item.get("name")}</div>
+                                <div className="price">{item.get("price")}</div>
                             </div>
                             <div className="content">
-                                {item.get('description')}
+                                {item.get("description")}
                             </div>
                         </div>
                     ))}
@@ -32,5 +32,5 @@ const Home = (props) => {
 };
 
 export default connect((state) => ({
-    specialItems: state.data.get('specials')
+    specialItems: state.data.get("specials")
 }))(Home);

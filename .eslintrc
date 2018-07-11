@@ -17,6 +17,7 @@
       2,
       4
     ],
+    "quotes": ["error", "double"],
     "react/prop-types": 0,
     "react/jsx-filename-extension": [
       1,
@@ -32,10 +33,7 @@
       "always"
     ],
     "prettier/prettier": [
-      "error",
-      {
-        "singleQuote": true
-      }
+      "error"
     ],
     "implicit-arrow-linebreak": [
      0

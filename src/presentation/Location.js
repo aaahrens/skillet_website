@@ -2,7 +2,7 @@
  * Created by drunkengranite on 7/10/17.
  */
 
-import * as React from 'react';
+import * as React from "react";
 
 export const LocationBody = () => (
     <div className="location-container">
