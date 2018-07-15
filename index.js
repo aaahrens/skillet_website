@@ -1,5 +1,8 @@
 require("ignore-styles");
-require("babel-register")({ ignore: /\/(build|node_modules)\//, presets: ["es2015", "react-app"] });
+require("babel-register")({
+    ignore: /\/(build|node_modules)\//,
+    presets: ["es2015", "react-app"]
+});
 
 const server = require("./server");
 
